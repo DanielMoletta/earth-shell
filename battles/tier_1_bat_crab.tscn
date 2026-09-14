@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://brugvr5u5ejhp"]
+
+[ext_resource type="PackedScene" uid="uid://d0efyathkfg74" path="res://scenes/enemy/enemy.tscn" id="1_gjjq5"]
+[ext_resource type="Resource" uid="uid://bbo24od4aavfj" path="res://enemies/bat/bat_enemy.tres" id="2_ak42c"]
+[ext_resource type="Resource" uid="uid://bnmpwl3k8qb8n" path="res://enemies/crab/crab_enemy.tres" id="3_kmctf"]
+
+[node name="Tier1BatCrab" type="Node2D" unique_id=1714119200]
+
+[node name="Enemy" parent="." unique_id=1407990471 instance=ExtResource("1_gjjq5")]
+position = Vector2(447.99997, 91.99999)
+stats = ExtResource("2_ak42c")
+
+[node name="Enemy2" parent="." unique_id=1797805482 instance=ExtResource("1_gjjq5")]
+position = Vector2(375.99997, 158.99998)
+stats = ExtResource("3_kmctf")

@@ -17,6 +17,7 @@ run_startup = ExtResource("2_wdonh")
 [node name="CurrentView" type="Node" parent="." unique_id=492656393]
 
 [node name="DebugButtons" type="VBoxContainer" parent="." unique_id=1500594011]
+visible = false
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 145.0

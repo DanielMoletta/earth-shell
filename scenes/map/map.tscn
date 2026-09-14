@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dleuldy72srut" path="res://scenes/map/map.gd" id="1_tqkkf"]
 [ext_resource type="Script" uid="uid://b5argiwtkb81q" path="res://scenes/map/map_generator.gd" id="2_a2pkv"]
+[ext_resource type="Resource" uid="uid://dyls7jg58j7y2" path="res://battles/battle_stats_pool.tres" id="3_a2pkv"]
 
 [sub_resource type="Gradient" id="Gradient_tqkkf"]
 colors = PackedColorArray(0.72139144, 0.41070503, 0.36496624, 1, 0.5897296, 0.43471643, 0.642359, 1)
@@ -26,6 +27,7 @@ offset = Vector2(288, 162)
 
 [node name="MapGenerator" type="Node2D" parent="." unique_id=561007761]
 script = ExtResource("2_a2pkv")
+battle_stats_pool = ExtResource("3_a2pkv")
 
 [node name="MapBackground" type="CanvasLayer" parent="." unique_id=1438559773]
 layer = -1
