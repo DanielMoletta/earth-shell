@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://c027fbfw6n7id"]
+
+[ext_resource type="Script" uid="uid://b8jfngstneq5c" path="res://scenes/battle/battle_manager/battle_manager.gd" id="1_d13r8"]
+[ext_resource type="Texture2D" uid="uid://gu1v8wxlpk5x" path="res://assets/sprites/objects/monster_icon.png" id="1_yroli"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2ixj"]
+bg_color = Color(0.3323515, 0.18152794, 0.18560424, 0.7058824)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_detail = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1wu76"]
+bg_color = Color(0.9253029, 0.39681324, 0.36914533, 1)
+corner_radius_top_right = 148
+corner_detail = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1oh2w"]
+bg_color = Color(0.8587616, 0.5683428, 0.3831702, 1)
+corner_radius_top_left = 209
+corner_detail = 4
+anti_aliasing = false
+
+[node name="BattleManager" type="Control" unique_id=1056521257]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 576.0
+offset_bottom = 324.0
+script = ExtResource("1_d13r8")
+
+[node name="TurnContainer" type="HBoxContainer" parent="." unique_id=1302054501]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.0
+offset_right = 81.0
+offset_bottom = 40.5
+grow_horizontal = 2
+rotation = 6.2831855
+pivot_offset = Vector2(81, 20.25)
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TurnContainer" unique_id=216038760]
+layout_mode = 2
+texture = ExtResource("1_yroli")
+expand_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="TurnContainer" unique_id=1748721579]
+layout_mode = 2
+texture = ExtResource("1_yroli")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="TurnContainer" unique_id=94609838]
+layout_mode = 2
+texture = ExtResource("1_yroli")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="TurnContainer" unique_id=405076004]
+layout_mode = 2
+texture = ExtResource("1_yroli")
+expand_mode = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1058590212]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -100.0
+offset_right = 288.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="Panel" unique_id=1946098374]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -70.0
+offset_top = -20.0
+offset_right = 70.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_r2ixj")
+text = "Terminar turno"
+
+[node name="Health" type="ProgressBar" parent="." unique_id=536788441]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 180.0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_1wu76")
+
+[node name="Energy" type="ProgressBar" parent="." unique_id=1052020909]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -30.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_1oh2w")

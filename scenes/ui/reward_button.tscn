@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://l325o6vno684"]
+
+[ext_resource type="Script" uid="uid://c3cww2au15edp" path="res://scenes/ui/reward_button.gd" id="1_y2wrr"]
+[ext_resource type="Texture2D" uid="uid://byrvd5o83legp" path="res://art/gold.png" id="2_8fbqs"]
+
+[node name="RewardButton" type="Button" unique_id=1890819820]
+custom_minimum_size = Vector2(0, 35)
+offset_right = 140.0
+offset_bottom = 40.0
+script = ExtResource("1_y2wrr")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1981837639]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=768420373]
+layout_mode = 2
+
+[node name="CustomIcon" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=1266972706]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("2_8fbqs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CustomText" type="Label" parent="MarginContainer/HBoxContainer" unique_id=900769081]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "99 gold"
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

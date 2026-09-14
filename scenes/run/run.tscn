@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://ckala7j18axl0"]
+
+[ext_resource type="PackedScene" uid="uid://jqnfa2qy4qxh" path="res://scenes/map/map.tscn" id="1_8rlou"]
+[ext_resource type="Script" uid="uid://eu1axl8evrjw" path="res://scenes/run/run.gd" id="1_l7o68"]
+[ext_resource type="Resource" uid="uid://bdpsnr4l5jlv8" path="res://scenes/run/run_startup.tres" id="2_wdonh"]
+[ext_resource type="PackedScene" uid="uid://d18d7kmc04051" path="res://scenes/ui/gold_ui.tscn" id="4_0tt4g"]
+[ext_resource type="Texture2D" uid="uid://b23pyavqbxub6" path="res://art/deck.png" id="4_5o40y"]
+[ext_resource type="Script" uid="uid://brevylmwhrrk6" path="res://scenes/ui/card_pile_opener.gd" id="5_0tt4g"]
+[ext_resource type="PackedScene" uid="uid://b33y6j0uku62v" path="res://scenes/ui/card_pile_view.tscn" id="6_wo0nw"]
+
+[node name="Run" type="Node" unique_id=997617391]
+script = ExtResource("1_l7o68")
+run_startup = ExtResource("2_wdonh")
+
+[node name="Map" parent="." unique_id=903551952 instance=ExtResource("1_8rlou")]
+
+[node name="CurrentView" type="Node" parent="." unique_id=492656393]
+
+[node name="DebugButtons" type="VBoxContainer" parent="." unique_id=1500594011]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 145.0
+grow_vertical = 2
+alignment = 1
+
+[node name="MapButton" type="Button" parent="DebugButtons" unique_id=708137172]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Map"
+
+[node name="BattleButton" type="Button" parent="DebugButtons" unique_id=899589908]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Battle"
+
+[node name="ShopButton" type="Button" parent="DebugButtons" unique_id=579493658]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Shop"
+
+[node name="TreasureButton" type="Button" parent="DebugButtons" unique_id=683860472]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Treasure"
+
+[node name="RewardsButton" type="Button" parent="DebugButtons" unique_id=1815119425]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Rewards"
+
+[node name="CampfireButton" type="Button" parent="DebugButtons" unique_id=529827042]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Campfire"
+
+[node name="TopBar" type="CanvasLayer" parent="." unique_id=831569167]
+layer = 3
+
+[node name="Background" type="ColorRect" parent="TopBar" unique_id=1199224619]
+custom_minimum_size = Vector2(0, 40)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 0.42745098)
+
+[node name="BarItems" type="HBoxContainer" parent="TopBar" unique_id=1113910221]
+custom_minimum_size = Vector2(0, 40)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="GoldUI" parent="TopBar/BarItems" unique_id=220065484 instance=ExtResource("4_0tt4g")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PlaceHolder" type="Control" parent="TopBar/BarItems" unique_id=1339087775]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DeckButton" type="TextureButton" parent="TopBar/BarItems" unique_id=2123974493 node_paths=PackedStringArray("counter")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture_normal = ExtResource("4_5o40y")
+stretch_mode = 5
+script = ExtResource("5_0tt4g")
+counter = NodePath("Label")
+metadata/_custom_type_script = "uid://brevylmwhrrk6"
+
+[node name="Label" type="Label" parent="TopBar/BarItems/DeckButton" unique_id=763600831]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 25.0
+offset_right = 13.0
+offset_bottom = 60.0
+text = "99
+"
+horizontal_alignment = 1
+
+[node name="DeckView" parent="TopBar" unique_id=1991278434 instance=ExtResource("6_wo0nw")]
+unique_name_in_owner = true
+visible = false

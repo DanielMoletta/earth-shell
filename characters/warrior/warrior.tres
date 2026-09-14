@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterStats" format=3 uid="uid://sbkc4o401k4l"]
+
+[ext_resource type="Texture2D" uid="uid://cpydvk8mq66o5" path="res://art/tile_0087.png" id="1_8jkdb"]
+[ext_resource type="Script" uid="uid://dhbqymqr15s51" path="res://custom_resources/character_stats.gd" id="1_d8ou5"]
+[ext_resource type="Resource" uid="uid://bisr2j1fomln8" path="res://characters/warrior/warrior_draftable_cards.tres" id="2_wgifn"]
+[ext_resource type="Resource" uid="uid://dyyfi3rcfxyug" path="res://characters/warrior/warrior_starting_deck.tres" id="3_d68oj"]
+
+[resource]
+script = ExtResource("1_d8ou5")
+character_name = "Warrior"
+description = "Likes to slash."
+portrait = ExtResource("1_8jkdb")
+starting_deck = ExtResource("3_d68oj")
+draftable_cards = ExtResource("2_wgifn")
+cards_per_turn = 4
+max_mana = 3
+max_health = 35
+art = ExtResource("1_8jkdb")

@@ -1,0 +1,203 @@
+[gd_scene format=3 uid="uid://cahno8aso5net"]
+
+[ext_resource type="Script" uid="uid://b64p6qee1shtj" path="res://scenes/battle/battle.gd" id="1_4s751"]
+[ext_resource type="Texture2D" uid="uid://cp4iq5fd6j8be" path="res://art/background.png" id="1_ybkl6"]
+[ext_resource type="PackedScene" uid="uid://d0efyathkfg74" path="res://scenes/enemy/enemy.tscn" id="2_02s5s"]
+[ext_resource type="Script" uid="uid://cxoh3rx5prwlk" path="res://scenes/ui/hand.gd" id="2_uaw60"]
+[ext_resource type="PackedScene" uid="uid://2n4lap6w3pde" path="res://scenes/player/player.tscn" id="3_dpj45"]
+[ext_resource type="AudioStream" uid="uid://dpdenqqbovwfq" path="res://art/8_bit_iced_village_lofi.mp3" id="3_nuoky"]
+[ext_resource type="PackedScene" uid="uid://dwt63vvppukag" path="res://scenes/card_target_selector/card_target_selector.tscn" id="3_vyv1n"]
+[ext_resource type="Script" uid="uid://b7cxwmygwbyhl" path="res://scenes/enemy/enemy_handler.gd" id="4_41vpn"]
+[ext_resource type="Resource" uid="uid://sbkc4o401k4l" path="res://characters/warrior/warrior.tres" id="4_fwb8a"]
+[ext_resource type="Resource" uid="uid://bnmpwl3k8qb8n" path="res://enemies/crab/crab_enemy.tres" id="5_5flmk"]
+[ext_resource type="Script" uid="uid://dklea2wxl7vtn" path="res://scenes/ui/battle_ui.gd" id="7_18vit"]
+[ext_resource type="Script" uid="uid://bdy18mfetsofa" path="res://scenes/player/player_handler.gd" id="8_3di7i"]
+[ext_resource type="Resource" uid="uid://bbo24od4aavfj" path="res://enemies/bat/bat_enemy.tres" id="8_d4c2d"]
+[ext_resource type="PackedScene" uid="uid://bnbwu7pkbrwox" path="res://scenes/ui/mana_ui.tscn" id="11_2vu01"]
+[ext_resource type="PackedScene" uid="uid://chry0sgk7t0yf" path="res://scenes/ui/tooltip.tscn" id="12_qx741"]
+[ext_resource type="Theme" uid="uid://c8cqncsqlplyu" path="res://main_theme.tres" id="13_523u4"]
+[ext_resource type="Script" uid="uid://5bs3yjqabp02" path="res://scenes/ui/red_flash.gd" id="15_qvh8t"]
+[ext_resource type="PackedScene" uid="uid://bpcqagn2j14u4" path="res://scenes/ui/card_pile_opener.tscn" id="17_sgdsx"]
+[ext_resource type="PackedScene" uid="uid://dfig8d63ggof1" path="res://scenes/ui/battle_over_panel.tscn" id="17_xrby7"]
+[ext_resource type="Texture2D" uid="uid://dkr2sivgeiud2" path="res://art/discard.png" id="18_5moxy"]
+[ext_resource type="PackedScene" uid="uid://b33y6j0uku62v" path="res://scenes/ui/card_pile_view.tscn" id="21_156m4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xyg5u"]
+size = Vector2(576, 229)
+
+[node name="Battle" type="Node2D" unique_id=551633531]
+script = ExtResource("1_4s751")
+char_stats = ExtResource("4_fwb8a")
+music = ExtResource("3_nuoky")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1447446773]
+modulate = Color(0.321569, 0.321569, 0.321569, 1)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("1_ybkl6")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="CardDropArea" type="Area2D" parent="." unique_id=1819093664]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropArea" unique_id=1465623311]
+position = Vector2(288, 114.5)
+shape = SubResource("RectangleShape2D_xyg5u")
+debug_color = Color(0, 0.6, 0.701961, 0.117647)
+metadata/_edit_lock_ = true
+
+[node name="EnemyHandler" type="Node2D" parent="." unique_id=880062048]
+script = ExtResource("4_41vpn")
+
+[node name="BatEnemy" parent="EnemyHandler" unique_id=204908929 instance=ExtResource("2_02s5s")]
+position = Vector2(327, 135)
+scale = Vector2(1.6, 1.6)
+stats = ExtResource("8_d4c2d")
+
+[node name="CrabEnemy" parent="EnemyHandler" unique_id=2011474981 instance=ExtResource("2_02s5s")]
+position = Vector2(445, 119)
+scale = Vector2(1.6, 1.6)
+stats = ExtResource("5_5flmk")
+
+[node name="BatEnemy2" parent="EnemyHandler" unique_id=1203344234 instance=ExtResource("2_02s5s")]
+position = Vector2(517.00006, 188.00002)
+scale = Vector2(1.6, 1.6)
+stats = ExtResource("8_d4c2d")
+
+[node name="Player" parent="." unique_id=455721413 instance=ExtResource("3_dpj45")]
+position = Vector2(112.00001, 172.00002)
+scale = Vector2(2.42, 2.42)
+stats = ExtResource("4_fwb8a")
+
+[node name="CardTargetSelector" parent="." unique_id=1282956703 instance=ExtResource("3_vyv1n")]
+
+[node name="PlayerHandler" type="Node" parent="." unique_id=2083612885 node_paths=PackedStringArray("hand")]
+script = ExtResource("8_3di7i")
+hand = NodePath("../BattleUI/Hand")
+
+[node name="BattleUI" type="CanvasLayer" parent="." unique_id=599857647 groups=["ui_layer"]]
+script = ExtResource("7_18vit")
+
+[node name="Hand" type="HBoxContainer" parent="BattleUI" unique_id=1453058509]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -165.0
+offset_top = -68.0
+offset_right = 165.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+script = ExtResource("2_uaw60")
+
+[node name="ManaUI" parent="BattleUI" unique_id=2145723912 instance=ExtResource("11_2vu01")]
+offset_left = 16.0
+offset_top = -93.0
+offset_right = 76.0
+offset_bottom = -68.0
+
+[node name="Tooltip" parent="BattleUI" unique_id=609801612 instance=ExtResource("12_qx741")]
+offset_left = -53.0
+offset_top = 8.0
+offset_right = 57.0
+offset_bottom = 44.0
+
+[node name="EndTurnButton" type="Button" parent="BattleUI" unique_id=1467839605]
+unique_name_in_owner = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -93.0
+offset_right = -4.0
+offset_bottom = -63.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("13_523u4")
+disabled = true
+text = "End Turn"
+
+[node name="DrawPileButton" parent="BattleUI" unique_id=499367403 node_paths=PackedStringArray("counter") instance=ExtResource("17_sgdsx")]
+unique_name_in_owner = true
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -53.0
+offset_right = 65.0
+offset_bottom = -13.0
+grow_vertical = 0
+counter = NodePath("Counter")
+
+[node name="Counter" type="Label" parent="BattleUI/DrawPileButton" unique_id=1121228028]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 29.0
+offset_right = 42.0
+offset_bottom = 45.0
+text = "99"
+horizontal_alignment = 1
+
+[node name="DiscardPileButton" parent="BattleUI" unique_id=2092244161 node_paths=PackedStringArray("counter") instance=ExtResource("17_sgdsx")]
+unique_name_in_owner = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -52.0
+offset_top = -53.0
+offset_right = -12.0
+offset_bottom = -13.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("18_5moxy")
+counter = NodePath("Counter")
+
+[node name="Counter" type="Label" parent="BattleUI/DiscardPileButton" unique_id=2051167372]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 29.0
+offset_right = 17.0
+offset_bottom = 45.0
+text = "99"
+horizontal_alignment = 1
+
+[node name="RedFlash" type="CanvasLayer" parent="." unique_id=1054966660]
+layer = 2
+script = ExtResource("15_qvh8t")
+
+[node name="ColorRect" type="ColorRect" parent="RedFlash" unique_id=1061730348]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.443137, 0.443137, 0)
+
+[node name="Timer" type="Timer" parent="RedFlash" unique_id=1362377519]
+wait_time = 0.1
+one_shot = true
+
+[node name="BattleOverLayer" type="CanvasLayer" parent="." unique_id=533095263]
+layer = 2
+
+[node name="BattleOverPanel" parent="BattleOverLayer" unique_id=1358885497 instance=ExtResource("17_xrby7")]
+visible = false
+
+[node name="CardPileViews" type="CanvasLayer" parent="." unique_id=675503670]
+layer = 4
+
+[node name="DrawPileView" parent="CardPileViews" unique_id=1991278434 instance=ExtResource("21_156m4")]
+unique_name_in_owner = true
+visible = false
+
+[node name="DiscardPileView" parent="CardPileViews" unique_id=843938520 instance=ExtResource("21_156m4")]
+unique_name_in_owner = true
+visible = false
