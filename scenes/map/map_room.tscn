@@ -18,7 +18,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 1)]
+"values": [Vector2(0.5, 0.5)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -70,7 +70,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1.23, 1.23), Vector2(1, 1)]
+"values": [Vector2(0.75, 0.75), Vector2(1, 1), Vector2(0.75, 0.75)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -87,6 +87,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_w2iac"]
 resource_name = "hover"
+length = 0.5
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -95,7 +96,7 @@ tracks/0/path = NodePath("Visuals/Sprite2D:scale")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1, 1)]
@@ -107,10 +108,10 @@ tracks/1/path = NodePath("Visuals/Line2D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(-0.03333333, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, -1.5707964, -3.1415927]
+"values": [-1.5707964, -3.1415927]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -119,7 +120,7 @@ tracks/2/path = NodePath("Visuals/Line2D:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, true]
@@ -131,7 +132,7 @@ tracks/3/path = NodePath("Visuals/Line2D:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
@@ -139,7 +140,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_w2n1o"]
 resource_name = "select"
-length = 0.6
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -159,7 +160,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.6),
+"times": PackedFloat32Array(0.3),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -176,6 +177,7 @@ _data = {
 }
 
 [node name="MapRoom" type="Area2D" unique_id=870163681]
+scale = Vector2(0.75, 0.75)
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_gyfd6")
@@ -185,12 +187,14 @@ scale = Vector2(0.9316207, 0.9316207)
 
 [node name="Line2D" type="Line2D" parent="Visuals" unique_id=1438113853]
 modulate = Color(1, 1, 1, 0)
-points = PackedVector2Array(25.761555, 0, 17.17437, -17.17437, 0, -25.761555, -17.17437, -17.17437, -25.761555, 0, -17.17437, 17.17437, 0, 25.761555, 17.17437, 17.17437)
+scale = Vector2(1.0000001, 1.0000001)
+points = PackedVector2Array(22.899158, 0, 11.449579, -11.449579, 0, -22.899158, -11.449579, -11.449579, -22.899158, 0, -11.449579, 11.449579, 0, 22.899158, 11.449579, 11.449579)
 closed = true
 width = 2.0
 default_color = Color(0.30793992, 0.53186065, 0.33973792, 0.7529412)
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals" unique_id=2053579471]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_hwhxx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=522515256]

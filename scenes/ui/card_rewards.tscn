@@ -57,7 +57,7 @@ text = "Skip"
 [node name="CardTooltipPopUp" parent="." unique_id=1412316402 instance=ExtResource("2_chmpv")]
 visible = false
 layout_mode = 1
-background_color = Color(0.37270463, 0.839623, 0.71250975, 0.6901961)
+background_color = Color(0, 0, 0, 0.78039217)
 
 [node name="TakeButton" type="Button" parent="CardTooltipPopUp" unique_id=1748366715]
 unique_name_in_owner = true

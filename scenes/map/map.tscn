@@ -24,6 +24,7 @@ unique_name_in_owner = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1065428849]
 offset = Vector2(288, 162)
+zoom = Vector2(2, 2)
 
 [node name="MapGenerator" type="Node2D" parent="." unique_id=561007761]
 script = ExtResource("2_a2pkv")
