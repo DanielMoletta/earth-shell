@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://ckehf08c0jhhe"]
+
+[ext_resource type="Texture2D" uid="uid://d0edy7thj8ce6" path="res://art/heart.png" id="1_7scyp"]
+[ext_resource type="Script" uid="uid://3kqqcaowuhcp" path="res://scenes/status_handler/status_ui.gd" id="1_r24ij"]
+[ext_resource type="Resource" uid="uid://bd6u3s3v62a7y" path="res://statuses/muscle.tres" id="2_vm08l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vnn0b"]
+font_size = 7
+
+[sub_resource type="LabelSettings" id="LabelSettings_om7lw"]
+font_size = 7
+
+[node name="StatusUI" type="Control" unique_id=41903955]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r24ij")
+status = ExtResource("2_vm08l")
+
+[node name="Icon" type="TextureRect" parent="." unique_id=1134562768]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+texture = ExtResource("1_7scyp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Duration" type="Label" parent="." unique_id=1022099743]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 20.0
+offset_bottom = 15.0
+text = "99"
+label_settings = SubResource("LabelSettings_vnn0b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stacks" type="Label" parent="." unique_id=716499563]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 18.0
+offset_bottom = 14.0
+text = "99"
+label_settings = SubResource("LabelSettings_om7lw")
+horizontal_alignment = 1
+vertical_alignment = 1

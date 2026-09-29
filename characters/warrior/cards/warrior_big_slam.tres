@@ -10,6 +10,7 @@ id = "warrior_big_slam"
 rarity = 1
 target = 1
 cost = 2
+exhausts = true
 icon = ExtResource("1_odk1c")
 tooltip_text = "[center]Deal [color=\"ff0000\"]10[/color] damage and apply 2 [color=\"ff0000\"]Exposed[/color].[/center]"
 sound = ExtResource("3_0qbpi")

@@ -52,28 +52,26 @@ script = ExtResource("4_41vpn")
 
 [node name="BatEnemy" parent="EnemyHandler" unique_id=204908929 instance=ExtResource("2_02s5s")]
 position = Vector2(327, 135)
-scale = Vector2(1.6, 1.6)
 stats = ExtResource("8_d4c2d")
 
 [node name="CrabEnemy" parent="EnemyHandler" unique_id=2011474981 instance=ExtResource("2_02s5s")]
 position = Vector2(445, 119)
-scale = Vector2(1.6, 1.6)
 stats = ExtResource("5_5flmk")
 
 [node name="BatEnemy2" parent="EnemyHandler" unique_id=1203344234 instance=ExtResource("2_02s5s")]
 position = Vector2(517.00006, 188.00002)
-scale = Vector2(1.6, 1.6)
 stats = ExtResource("8_d4c2d")
 
 [node name="Player" parent="." unique_id=455721413 instance=ExtResource("3_dpj45")]
-position = Vector2(112.00001, 172.00002)
+position = Vector2(109.99999, 139.99998)
 scale = Vector2(2.42, 2.42)
 stats = ExtResource("4_fwb8a")
 
 [node name="CardTargetSelector" parent="." unique_id=1282956703 instance=ExtResource("3_vyv1n")]
 
-[node name="PlayerHandler" type="Node" parent="." unique_id=2083612885 node_paths=PackedStringArray("hand")]
+[node name="PlayerHandler" type="Node" parent="." unique_id=2083612885 node_paths=PackedStringArray("player", "hand")]
 script = ExtResource("8_3di7i")
+player = NodePath("../Player")
 hand = NodePath("../BattleUI/Hand")
 
 [node name="BattleUI" type="CanvasLayer" parent="." unique_id=599857647 groups=["ui_layer"]]
