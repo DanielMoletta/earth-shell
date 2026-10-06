@@ -98,10 +98,10 @@ offset_right = 76.0
 offset_bottom = -68.0
 
 [node name="Tooltip" parent="BattleUI" unique_id=609801612 instance=ExtResource("12_qx741")]
-offset_left = -53.0
-offset_top = 8.0
-offset_right = 57.0
-offset_bottom = 44.0
+offset_left = -110.0
+offset_top = 37.0
+offset_right = 110.0
+offset_bottom = 101.0
 
 [node name="EndTurnButton" type="Button" parent="BattleUI" unique_id=1467839605]
 unique_name_in_owner = true
