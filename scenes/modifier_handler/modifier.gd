@@ -10,7 +10,7 @@ func get_value(source: String) -> ModifierValue:
 	for value: ModifierValue in get_children():
 		if value.source == source:
 			return value
-	
+		
 	return null
 
 
@@ -34,7 +34,7 @@ func clear_values() -> void:
 		value.queue_free()
 
 
-func get_modifier_value(base: int) -> int:
+func get_modified_value(base: int) -> int:
 	var flat_result: int = base
 	var percent_result: float = 1.0
 	# Apply flat modifiers first
@@ -46,5 +46,5 @@ func get_modifier_value(base: int) -> int:
 	for value: ModifierValue in get_children():
 		if value.type == ModifierValue.Type.PERCENT_BASED:
 			percent_result += value.percent_value
-	
+			
 	return floori(flat_result * percent_result)

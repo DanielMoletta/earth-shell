@@ -2,7 +2,11 @@ class_name MuscleStatus
 extends Status
 
 
-func intialize_status(target: Node) -> void:
+func get_tooltip() -> String:
+	return tooltip % stacks
+
+
+func initialize_status(target: Node) -> void:
 	status_changed.connect(_on_status_changed.bind(target))
 	_on_status_changed(target)
 
@@ -17,6 +21,6 @@ func _on_status_changed(target: Node) -> void:
 	
 	if not muscle_modifier_value:
 		muscle_modifier_value = ModifierValue.create_new_modifier("muscle", ModifierValue.Type.FLAT)
-	
+		
 	muscle_modifier_value.flat_value = stacks
 	dmg_dealt_modifier.add_new_value(muscle_modifier_value)

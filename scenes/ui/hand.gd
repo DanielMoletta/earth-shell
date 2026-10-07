@@ -3,6 +3,7 @@ extends HBoxContainer
 
 const CARD_UI_SCENE := preload("res://scenes/card_ui/card_ui.tscn")
 
+@export var player: Player
 @export var char_stats: CharacterStats
 
 
@@ -13,6 +14,7 @@ func add_card(card: Card) -> void:
 	new_card_ui.card = card
 	new_card_ui.parent = self
 	new_card_ui.char_stats = char_stats
+	new_card_ui.player_modifiers = player.modifier_handler
 
 
 func discard_card(card: CardUI) -> void:

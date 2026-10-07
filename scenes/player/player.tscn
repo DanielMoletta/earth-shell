@@ -26,10 +26,10 @@ status_owner = NodePath("..")
 
 [node name="ModifierHandler" parent="." unique_id=1150408998 instance=ExtResource("5_75vfm")]
 
-[node name="DmgDealt" parent="ModifierHandler" unique_id=69369778 instance=ExtResource("6_0owmy")]
+[node name="DamageDealtModifier" parent="ModifierHandler" unique_id=69369778 instance=ExtResource("6_0owmy")]
 
-[node name="DmgTaken" parent="ModifierHandler" unique_id=1048142428 instance=ExtResource("6_0owmy")]
+[node name="DamageTakenModifier" parent="ModifierHandler" unique_id=864297977 instance=ExtResource("6_0owmy")]
 type = 1
 
-[node name="CostModifier" parent="ModifierHandler" unique_id=1735384070 instance=ExtResource("6_0owmy")]
+[node name="CardCostModifier" parent="ModifierHandler" unique_id=1595336587 instance=ExtResource("6_0owmy")]
 type = 2
