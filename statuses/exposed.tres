@@ -10,5 +10,5 @@ stack_type = 2
 can_expire = true
 duration = 1
 icon = ExtResource("1_0rmh8")
-tooltip = "TODO"
+tooltip = "Exposed: takes 50%% more damage for %s turns."
 metadata/_custom_type_script = "uid://bghrau2od1pq3"

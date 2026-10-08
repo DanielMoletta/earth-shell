@@ -3,5 +3,8 @@
 [ext_resource type="Script" uid="uid://c87qdmlqiq6g1" path="res://scenes/status_handler/status_handler.gd" id="1_7of5l"]
 
 [node name="StatusHandler" type="GridContainer" unique_id=728533244]
+mouse_filter = 0
 columns = 6
 script = ExtResource("1_7of5l")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

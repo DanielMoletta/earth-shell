@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dfig8d63ggof1" path="res://scenes/ui/battle_over_panel.tscn" id="17_xrby7"]
 [ext_resource type="Texture2D" uid="uid://dkr2sivgeiud2" path="res://art/discard.png" id="18_5moxy"]
 [ext_resource type="PackedScene" uid="uid://b33y6j0uku62v" path="res://scenes/ui/card_pile_view.tscn" id="21_156m4"]
+[ext_resource type="PackedScene" uid="uid://c80kdpprjlix5" path="res://scenes/ui/status_view.tscn" id="22_5moxy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyg5u"]
 size = Vector2(576, 229)
@@ -199,4 +200,10 @@ visible = false
 
 [node name="DiscardPileView" parent="CardPileViews" unique_id=843938520 instance=ExtResource("21_156m4")]
 unique_name_in_owner = true
+visible = false
+
+[node name="StatusViewLayer" type="CanvasLayer" parent="." unique_id=390079185]
+layer = 4
+
+[node name="StatusView" parent="StatusViewLayer" unique_id=2116107155 instance=ExtResource("22_5moxy")]
 visible = false

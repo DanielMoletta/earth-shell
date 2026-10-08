@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://3batbjpo085p"]
+
+[ext_resource type="Script" uid="uid://ckyg3qdowdc4f" path="res://scenes/ui/status_tooltip.gd" id="1_5okso"]
+[ext_resource type="Texture2D" uid="uid://cg24tk7mejd27" path="res://art/expose.png" id="1_j4lfu"]
+
+[node name="StatusTooltip" type="HBoxContainer" unique_id=1669450625]
+custom_minimum_size = Vector2(340, 0)
+offset_right = 340.0
+offset_bottom = 27.0
+script = ExtResource("1_5okso")
+
+[node name="Icon" type="TextureRect" parent="." unique_id=357111522]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("1_j4lfu")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=269901063]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 11
+text = "True Strength Form: at the start of its turn, gains 2 Muscle."
+vertical_alignment = 1
+autowrap_mode = 2

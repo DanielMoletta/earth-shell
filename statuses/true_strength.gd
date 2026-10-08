@@ -15,4 +15,3 @@ func apply_status(target: Node) -> void:
 	status_effect.execute([target])
 	
 	status_applied.emit(self)
-	

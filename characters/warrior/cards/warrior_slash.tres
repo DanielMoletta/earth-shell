@@ -10,6 +10,6 @@ id = "warrior_slash"
 target = 2
 cost = 2
 icon = ExtResource("1_uhc8e")
-tooltip_text = "[center]Deal [color=\"ff0000\"]4[/color] damage
+tooltip_text = "[center]Deal [color=\"ff0000\"]%s[/color] damage
 to all enemies.[/center]"
 sound = ExtResource("3_4dvu8")

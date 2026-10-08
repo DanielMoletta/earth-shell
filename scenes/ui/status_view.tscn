@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://c80kdpprjlix5"]
+
+[ext_resource type="PackedScene" uid="uid://3batbjpo085p" path="res://scenes/ui/status_tooltip.tscn" id="1_l1c7h"]
+[ext_resource type="Script" uid="uid://cc1xwv68wcqt0" path="res://scenes/ui/status_view.gd" id="1_mnarn"]
+[ext_resource type="Resource" uid="uid://bd6u3s3v62a7y" path="res://statuses/muscle.tres" id="2_mnarn"]
+[ext_resource type="Resource" uid="uid://blrfi3epjij54" path="res://statuses/true_strength_form.tres" id="3_fyinj"]
+[ext_resource type="Resource" uid="uid://dgc07imca0bxd" path="res://statuses/exposed.tres" id="4_73t78"]
+
+[node name="StatusView" type="Control" unique_id=2116107155]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mnarn")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1492985841]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.4509804)
+metadata/_edit_lock_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1599360363]
+custom_minimum_size = Vector2(450, 250)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -125.0
+offset_right = 225.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer" unique_id=300066652]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="StatusTooltips" type="VBoxContainer" parent="ScrollContainer/CenterContainer" unique_id=1865204907]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="StatusTooltip" parent="ScrollContainer/CenterContainer/StatusTooltips" unique_id=1669450625 instance=ExtResource("1_l1c7h")]
+layout_mode = 2
+status = ExtResource("2_mnarn")
+
+[node name="StatusTooltip2" parent="ScrollContainer/CenterContainer/StatusTooltips" unique_id=2131712288 instance=ExtResource("1_l1c7h")]
+layout_mode = 2
+status = ExtResource("3_fyinj")
+
+[node name="StatusTooltip3" parent="ScrollContainer/CenterContainer/StatusTooltips" unique_id=1761673797 instance=ExtResource("1_l1c7h")]
+layout_mode = 2
+status = ExtResource("4_73t78")
+
+[node name="StatusTooltip4" parent="ScrollContainer/CenterContainer/StatusTooltips" unique_id=912644854 instance=ExtResource("1_l1c7h")]
+layout_mode = 2
+status = ExtResource("4_73t78")
+
+[node name="BackButton" type="Button" parent="." unique_id=1690402621]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -160.0
+offset_top = 8.0
+offset_right = -10.0
+offset_bottom = 58.0
+grow_horizontal = 0
+text = "Back"
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
