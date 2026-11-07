@@ -24,6 +24,8 @@ func _ready() -> void:
 func start_battle() -> void:
 	get_tree().paused = false
 	MusicPlayer.play(music, true)
+	random_objects()
+	random_background($BackgroundLayer)
 	
 	battle_ui.char_stats = char_stats
 	player.stats = char_stats
@@ -56,4 +58,35 @@ func _on_relics_activated(type: Relic.Type) -> void:
 			player_handler.start_battle(char_stats)
 			battle_ui.initialize_card_pile_ui()
 		Relic.Type.END_OF_COMBAT:
-			Events.battle_over_screen_requested.emit("Victorious!", BattleOverPanel.Type.WIN)
+			Events.battle_over_screen_requested.emit("Vitorioso!", BattleOverPanel.Type.WIN)
+
+
+func random_objects() -> void:
+	var background_layer := get_node_or_null("BackgroundLayer")
+	
+	if not background_layer:
+		print("CanvasLayer 'BackgroundLayer' não encontrada!")
+		if not background_layer:
+			return
+	
+	var texture_rects := background_layer.find_children("*", "TextureRect", true, false)
+	
+	for node in texture_rects:
+		if node is TextureRect:
+			node.visible = randf() < 0.5
+
+
+func random_background(container_backgrounds: Node) -> void:
+	var backgrounds: Array[Sprite2D] = []
+	
+	for child in container_backgrounds.get_children():
+		if child is Sprite2D:
+			backgrounds.append(child)
+	
+	if backgrounds.is_empty():
+		return
+	
+	var indice_escolhido = randi() % backgrounds.size()
+	
+	for i in range(backgrounds.size()):
+		backgrounds[i].visible = (i == indice_escolhido)

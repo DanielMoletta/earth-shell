@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://3mwxsefb43gt"]
+
+[ext_resource type="Script" uid="uid://dig2rhbp6fyx5" path="res://scenes/event_rooms/animal_family_event.gd" id="1_iicsp"]
+[ext_resource type="Texture2D" uid="uid://cy75na14jhygk" path="res://art/summer6/1.png" id="2_8w0wt"]
+[ext_resource type="Texture2D" uid="uid://dqen3jhbfsddl" path="res://art/summer6/5.png" id="3_75c6o"]
+[ext_resource type="Texture2D" uid="uid://w5tljx0utx0f" path="res://art/Basic Asset Pack/Basic Animal Animations/Clucking Chicken/CluckingChicken.png" id="4_75c6o"]
+[ext_resource type="PackedScene" uid="uid://br2rpgkb7gbxr" path="res://scenes/event_rooms/event_room_button.tscn" id="4_yfm28"]
+[ext_resource type="Texture2D" uid="uid://s4nna1ycmref" path="res://art/Basic Asset Pack/Basic Animal Animations/Tiny Chick/TinyChick.png" id="5_yfm28"]
+
+[node name="AnimalFamilyEvent" type="Control" unique_id=374081897]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_iicsp")
+metadata/_custom_type_script = "uid://cbb1lrt5svuw2"
+
+[node name="Visuals" type="Control" parent="." unique_id=97475110]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background0" type="TextureRect" parent="Visuals" unique_id=699068201]
+modulate = Color(0.6981919, 0.30998963, 0.1643242, 1)
+layout_mode = 0
+offset_left = -8.0
+offset_top = -11.0
+offset_right = 278.0
+offset_bottom = 151.0
+texture = ExtResource("2_8w0wt")
+expand_mode = 1
+
+[node name="Background1" type="TextureRect" parent="Visuals" unique_id=281579574]
+modulate = Color(0.9590418, 0.67509955, 0.44835663, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -208.0
+offset_right = 408.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(288, 288)
+texture = ExtResource("3_75c6o")
+
+[node name="TextureRect" type="TextureRect" parent="Visuals" unique_id=1560664389]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 99.0
+offset_right = 134.0
+offset_bottom = 137.0
+texture = ExtResource("4_75c6o")
+
+[node name="TextureRect2" type="TextureRect" parent="Visuals" unique_id=1533022068]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 94.0
+offset_right = 100.0
+offset_bottom = 132.0
+texture = ExtResource("4_75c6o")
+
+[node name="TextureRect3" type="TextureRect" parent="Visuals" unique_id=952239728]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 114.0
+offset_right = 98.0
+offset_bottom = 138.0
+texture = ExtResource("5_yfm28")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=683158597]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 122.0
+offset_top = 30.0
+offset_right = 252.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1086303451]
+layout_mode = 2
+text = "Uma familia de galinhas ofereceu
+mantimentos para voce"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BlueButton" parent="VBoxContainer" unique_id=251640937 instance=ExtResource("4_yfm28")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 20)
+layout_mode = 2
+text = "Aceitar ovo azul
+(curar 20% de HP)"
+
+[node name="RedButton" parent="VBoxContainer" unique_id=1155890439 instance=ExtResource("4_yfm28")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Aceitar ovo vermelho
+(+2HP Maximo)"
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=818337913]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://c2onrruf0k1a5"]
+
+[ext_resource type="Script" uid="uid://7rn7nviov8f" path="res://scenes/event_rooms/industrial_monolith_event.gd" id="1_oejsy"]
+[ext_resource type="Texture2D" uid="uid://b4ch5a5guu30s" path="res://art/summer8/2.png" id="2_gfs3t"]
+[ext_resource type="Texture2D" uid="uid://ls0viefwwhff" path="res://art/PostApocalypse_AssetPack_v1.1.2/Objects/Washing-machine.png" id="3_ybgs5"]
+[ext_resource type="Texture2D" uid="uid://dxe6spcf8r7f1" path="res://art/PostApocalypse_AssetPack_v1.1.2/Objects/Buildings/Ladder_Balcony_Metal_1_Rusty.png" id="4_7hnb3"]
+[ext_resource type="Texture2D" uid="uid://c57kiql1b6gvn" path="res://art/summer8/4.png" id="5_gfs3t"]
+[ext_resource type="PackedScene" uid="uid://br2rpgkb7gbxr" path="res://scenes/event_rooms/event_room_button.tscn" id="8_4p0ds"]
+
+[node name="IndustrialMonolithEvent" type="Control" unique_id=374081897]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_oejsy")
+metadata/_custom_type_script = "uid://cbb1lrt5svuw2"
+
+[node name="Visuals" type="Control" parent="." unique_id=97475110]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background0" type="TextureRect" parent="Visuals" unique_id=699068201]
+modulate = Color(0.46959174, 0.44778556, 0.30512235, 1)
+layout_mode = 0
+offset_left = -42.0
+offset_top = -162.0
+offset_right = 372.0
+offset_bottom = 107.0
+texture = ExtResource("2_gfs3t")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Visuals" unique_id=683183303]
+modulate = Color(0.40477458, 0.25450784, 0.07583063, 1)
+layout_mode = 0
+offset_left = 142.0
+offset_top = -37.99999
+offset_right = 272.0
+offset_bottom = 118.000015
+rotation = 0.25307274
+texture = ExtResource("3_ybgs5")
+
+[node name="TextureRect4" type="TextureRect" parent="Visuals" unique_id=1348911454]
+modulate = Color(0.40477458, 0.25450784, 0.07583063, 1)
+layout_mode = 0
+offset_left = 100.0
+offset_top = 5.000004
+offset_right = 220.0
+offset_bottom = 75.0
+rotation = 1.1606439
+texture = ExtResource("4_7hnb3")
+
+[node name="Background1" type="TextureRect" parent="Visuals" unique_id=281579574]
+modulate = Color(0.3463558, 0.32169953, 0.17750862, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -276.0
+offset_top = -260.0
+offset_right = 668.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(288, 288)
+texture = ExtResource("5_gfs3t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=683158597]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = 36.0
+offset_right = 175.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1086303451]
+layout_mode = 2
+text = "Voce examina os restos colossais 
+de uma máquina que outrora poluiu 
+este vale. Seus núcleos de energia 
+ainda guardam cargas instaveis."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExtractCoreButton" parent="VBoxContainer" unique_id=251640937 instance=ExtResource("8_4p0ds")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 20)
+layout_mode = 2
+text = "Tirar o nucleo de energia 
+(+1 Mana Maxima, mas perde 10 de HP)"
+
+[node name="DisableCoreButton" parent="VBoxContainer" unique_id=1155890439 instance=ExtResource("8_4p0ds")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Desmantelar com seguranca 
+(Ganha 100 de Ouro)"
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=818337913]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://cn741xodlkolv"]
+
+[ext_resource type="Script" uid="uid://deao5f01csucs" path="res://characters/wizard/cards/wizard_block.gd" id="1_xvwq5"]
+[ext_resource type="Texture2D" uid="uid://cpr3w6iktnjsk" path="res://art/Basic Asset Pack/Basic Animal Animations/Clucking Chicken/wizard_block.png" id="1_yl7hv"]
+
+[resource]
+script = ExtResource("1_xvwq5")
+id = "wizard_block"
+type = 1
+cost = 1
+icon = ExtResource("1_yl7hv")
+tooltip_text = "[center]Ganhe [color=\"0044ff\"]%s[/color] de block.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

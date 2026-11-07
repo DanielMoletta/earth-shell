@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://bhdjvxeesvkuc"]
+
+[ext_resource type="Texture2D" uid="uid://cj3h3rloqbgn3" path="res://art/Basic Asset Pack/Basic Animal Animations/Clucking Chicken/frozen.png" id="1_n1105"]
+[ext_resource type="Script" uid="uid://4piq1448jl2q" path="res://statuses/frozen.gd" id="1_yarvc"]
+
+[resource]
+script = ExtResource("1_yarvc")
+id = "congelado"
+stack_type = 2
+can_expire = true
+duration = 2
+icon = ExtResource("1_n1105")
+tooltip = "Congelado: dano de ataque reduzido em 25% por %s turnos."
+metadata/_custom_type_script = "uid://bgw186o0jltl8"

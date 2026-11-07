@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c87g5pqiyraf7"]
+
+[ext_resource type="PackedScene" uid="uid://d0efyathkfg74" path="res://scenes/enemy/enemy.tscn" id="1_wwddi"]
+[ext_resource type="Resource" uid="uid://bbo24od4aavfj" path="res://enemies/bat/bat_enemy.tres" id="2_vqv3e"]
+[ext_resource type="Resource" uid="uid://c8u4vlniew7wt" path="res://enemies/deflorest/deflorest_enemy.tres" id="3_srqwy"]
+
+[node name="Tier1Bats3" type="Node2D" unique_id=998348609]
+
+[node name="Enemy" parent="." unique_id=1825465476 instance=ExtResource("1_wwddi")]
+position = Vector2(192, 38)
+stats = ExtResource("2_vqv3e")
+
+[node name="Enemy2" parent="." unique_id=791601901 instance=ExtResource("1_wwddi")]
+position = Vector2(224, 60)
+stats = ExtResource("2_vqv3e")
+
+[node name="Enemy3" parent="." unique_id=661286832 instance=ExtResource("1_wwddi")]
+position = Vector2(192, 84)
+stats = ExtResource("3_srqwy")

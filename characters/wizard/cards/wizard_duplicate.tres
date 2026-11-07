@@ -1,0 +1,16 @@
+[gd_resource type="Resource" format=3 uid="uid://38ggiuwgiulv"]
+
+[ext_resource type="Script" uid="uid://cr8xjhiasct5r" path="res://characters/wizard/cards/wizard_duplicate.gd" id="1_gd51o"]
+[ext_resource type="Texture2D" uid="uid://dqcm5kcfwjnge" path="res://art/Basic Asset Pack/Basic Animal Animations/Clucking Chicken/wizard_duplicate.png" id="1_hvc1v"]
+
+[resource]
+script = ExtResource("1_gd51o")
+id = "wizard_duplicate"
+type = 1
+rarity = 2
+target = 1
+cost = 2
+exhausts = true
+icon = ExtResource("1_hvc1v")
+tooltip_text = "[center]Duplica todos os efeitos (stacks e duracao) ativos no inimigo.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

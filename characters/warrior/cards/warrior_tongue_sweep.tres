@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://n3va254ct6b3"]
+
+[ext_resource type="Texture2D" uid="uid://qincqxpfnytv" path="res://art/Basic Asset Pack/Basic Animal Animations/Croaking Toad/warrior_tongue_sweep.png" id="1_3vtw8"]
+[ext_resource type="Script" uid="uid://pl0j2p2fhamc" path="res://characters/warrior/cards/warrior_tongue_sweep.gd" id="2_rcgd7"]
+[ext_resource type="AudioStream" uid="uid://dixklg6g4jnsq" path="res://art/slash.ogg" id="3_1sp3s"]
+
+[resource]
+script = ExtResource("2_rcgd7")
+id = "warrior_tongue_sweep"
+target = 2
+cost = 2
+icon = ExtResource("1_3vtw8")
+tooltip_text = "[center]Cause [color=\"ff0000\"]%s[/color] de dano
+para todos os inimigos.[/center]"
+sound = ExtResource("3_1sp3s")

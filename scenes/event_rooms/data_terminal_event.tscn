@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://4k6y0xp72nbe"]
+
+[ext_resource type="Script" uid="uid://c3xwv4hql50nh" path="res://scenes/event_rooms/data_terminal_event.gd" id="1_ny6t3"]
+[ext_resource type="Texture2D" uid="uid://b4ch5a5guu30s" path="res://art/summer8/2.png" id="2_5s8sv"]
+[ext_resource type="Texture2D" uid="uid://hiwrx7oq2752" path="res://art/summer7/2.png" id="3_vofpp"]
+[ext_resource type="Texture2D" uid="uid://dp1xmupme4r71" path="res://art/PostApocalypse_AssetPack_v1.1.2/Objects/Vending-machine_Blue.png" id="4_demh2"]
+[ext_resource type="Texture2D" uid="uid://ccn5324obj5w3" path="res://art/PostApocalypse_AssetPack_v1.1.2/UI/Inventory/Inventory_1_Scrollbar.png" id="5_5s8sv"]
+[ext_resource type="PackedScene" uid="uid://br2rpgkb7gbxr" path="res://scenes/event_rooms/event_room_button.tscn" id="8_lnixi"]
+
+[node name="DataTerminalEvent" type="Control" unique_id=374081897]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ny6t3")
+metadata/_custom_type_script = "uid://cbb1lrt5svuw2"
+
+[node name="Visuals" type="Control" parent="." unique_id=97475110]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background0" type="TextureRect" parent="Visuals" unique_id=699068201]
+modulate = Color(0.68560165, 0.3141925, 0.2506644, 1)
+layout_mode = 0
+offset_left = -42.0
+offset_top = -162.0
+offset_right = 372.0
+offset_bottom = 107.0
+texture = ExtResource("2_5s8sv")
+expand_mode = 1
+
+[node name="Background1" type="TextureRect" parent="Visuals" unique_id=281579574]
+modulate = Color(0.48935598, 0.21590874, 0.28358808, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -272.0
+offset_top = -260.0
+offset_right = 672.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(288, 288)
+texture = ExtResource("3_vofpp")
+
+[node name="TextureRect2" type="TextureRect" parent="Visuals" unique_id=863474832]
+modulate = Color(0.84858304, 0.47942263, 0.34805185, 1)
+layout_mode = 0
+offset_left = 254.84372
+offset_top = 2.000008
+offset_right = 397.4705
+offset_bottom = 257.15717
+rotation = 1.5707964
+texture = ExtResource("4_demh2")
+
+[node name="TextureRect" type="TextureRect" parent="Visuals" unique_id=1560664389]
+modulate = Color(0.84858304, 0.47942263, 0.34805185, 1)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 10.000008
+offset_right = 246.84372
+offset_bottom = 135.0
+texture = ExtResource("5_5s8sv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=683158597]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 39.0
+offset_top = 24.0
+offset_right = 210.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1086303451]
+layout_mode = 2
+text = "Um terminal exibe registros finais 
+de um engenheiro lamentando
+o colapso ecologico."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StudyLogsButton" parent="VBoxContainer" unique_id=251640937 instance=ExtResource("8_lnixi")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 20)
+layout_mode = 2
+text = "Olhar os arquivos"
+
+[node name="FormatTerminalButton" parent="VBoxContainer" unique_id=1155890439 instance=ExtResource("8_lnixi")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Formatar o sistema para
+apagar memorias dolorosas"
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=818337913]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

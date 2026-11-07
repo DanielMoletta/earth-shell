@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://cedsow628sq3y"]
+
+[ext_resource type="Texture2D" uid="uid://by3otb2s20kbm" path="res://art/Basic Asset Pack/Basic Animal Animations/Croaking Toad/warrior_spit.png" id="1_8e57a"]
+[ext_resource type="Script" uid="uid://dj4cauibhec7m" path="res://characters/warrior/cards/warrior_spit.gd" id="2_3lqno"]
+[ext_resource type="AudioStream" uid="uid://dixklg6g4jnsq" path="res://art/slash.ogg" id="3_lmlm2"]
+
+[resource]
+script = ExtResource("2_3lqno")
+id = "warrior_spit"
+rarity = 2
+target = 1
+cost = 1
+icon = ExtResource("1_8e57a")
+tooltip_text = "[center]Cause [color=\"ff0000\"]%s[/color] de dano. +%s de dano neste combate.[/center]"
+sound = ExtResource("3_lmlm2")

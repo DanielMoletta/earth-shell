@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://dfrdaou640irp"]
+[gd_scene format=3 uid="uid://dfrdaou640irp"]
 
-[ext_resource type="Script" path="res://scenes/campfire/campfire.gd" id="1_i8fph"]
+[ext_resource type="Script" uid="uid://dxw2hrnjcr3vy" path="res://scenes/campfire/campfire.gd" id="1_i8fph"]
 [ext_resource type="Resource" uid="uid://sbkc4o401k4l" path="res://characters/warrior/warrior.tres" id="2_0gfpy"]
 [ext_resource type="Texture2D" uid="uid://djbldcvfo4swr" path="res://art/line.png" id="2_ykw02"]
 
@@ -120,11 +120,11 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ikhwv"]
 _data = {
-"RESET": SubResource("Animation_em2db"),
-"fade_out": SubResource("Animation_wekwb")
+&"RESET": SubResource("Animation_em2db"),
+&"fade_out": SubResource("Animation_wekwb")
 }
 
-[node name="Campfire" type="Control"]
+[node name="Campfire" type="Control" unique_id=1383957297]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -135,10 +135,10 @@ mouse_filter = 2
 script = ExtResource("1_i8fph")
 char_stats = ExtResource("2_0gfpy")
 
-[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+[node name="BackgroundLayer" type="CanvasLayer" parent="." unique_id=717648281]
 layer = 0
 
-[node name="Background" type="TextureRect" parent="BackgroundLayer"]
+[node name="Background" type="TextureRect" parent="BackgroundLayer" unique_id=1281936768]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -146,54 +146,61 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_6orn2")
 
-[node name="ParticlesLayer" type="CanvasLayer" parent="."]
+[node name="ParticlesLayer" type="CanvasLayer" parent="." unique_id=1632987767]
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="ParticlesLayer"]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="ParticlesLayer" unique_id=147014180]
 position = Vector2(90, 100)
 amount = 128
-process_material = SubResource("ParticleProcessMaterial_1jtqt")
 texture = ExtResource("2_ykw02")
 lifetime = 1.5
+process_material = SubResource("ParticleProcessMaterial_1jtqt")
 
-[node name="UILayer" type="CanvasLayer" parent="."]
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=291372454]
 
-[node name="UI" type="VBoxContainer" parent="UILayer"]
+[node name="UI" type="VBoxContainer" parent="UILayer" unique_id=261932985]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 8.0
-offset_top = -22.0
-offset_right = 72.0
-offset_bottom = 22.0
+offset_left = -10.0
+offset_top = -27.0
+offset_right = 90.0
+offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="UILayer/UI"]
+[node name="Title" type="Label" parent="UILayer/UI" unique_id=1813233278]
 layout_mode = 2
-text = "Campfire"
+text = "Fogueira"
 label_settings = SubResource("LabelSettings_k52g7")
 horizontal_alignment = 1
 
-[node name="Spacer" type="Control" parent="UILayer/UI"]
+[node name="Spacer" type="Control" parent="UILayer/UI" unique_id=844386317]
 layout_mode = 2
 
-[node name="RestButton" type="Button" parent="UILayer/UI"]
+[node name="RestButton" type="Button" parent="UILayer/UI" unique_id=705141914]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 14)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Rest"
+text = "Descansar"
 
-[node name="Description" type="Label" parent="UILayer/UI"]
+[node name="Description" type="Label" parent="UILayer/UI" unique_id=1438832631]
 layout_mode = 2
 text = "+30% HP"
 horizontal_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_ikhwv")
-}
+[node name="LoreLabel" type="Label" parent="UILayer/UI" unique_id=2033835596]
+unique_name_in_owner = true
+custom_maximum_size = Vector2(100, -1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.5686275, 0.83137256, 1)
+theme_override_colors/font_shadow_color = Color(0.3751573, 0.2806974, 0.55531126, 0.19215687)
+text = "texto aleatorio para testar os limites desta zorra"
+autowrap_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1711315756]
+libraries/ = SubResource("AnimationLibrary_ikhwv")
 
 [connection signal="pressed" from="UILayer/UI/RestButton" to="." method="_on_rest_button_pressed"]

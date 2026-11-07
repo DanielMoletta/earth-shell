@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://b3nbthpv5106d"]
+
+[ext_resource type="Texture2D" uid="uid://cuwglxty1y3wx" path="res://art/Basic Asset Pack/Basic Animal Animations/Clucking Chicken/wizard_wind.png" id="1_b02vv"]
+[ext_resource type="Script" uid="uid://cshh4v0m57vqt" path="res://characters/wizard/cards/wizard_wind.gd" id="1_tmtn0"]
+
+[resource]
+script = ExtResource("1_tmtn0")
+id = "wizard_wind"
+rarity = 2
+target = 2
+cost = 2
+icon = ExtResource("1_b02vv")
+tooltip_text = "[center]Causa [color=\"ff0000\"]%s[/color] de dano a todos os inimigos.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

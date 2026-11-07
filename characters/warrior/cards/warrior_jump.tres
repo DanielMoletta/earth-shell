@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://bcmktyqt2d7cm"]
+
+[ext_resource type="Texture2D" uid="uid://cqiv7y7tkaujj" path="res://art/Basic Asset Pack/Basic Animal Animations/Croaking Toad/warrior_jump.png" id="1_ntwbr"]
+[ext_resource type="Script" uid="uid://xdheakd10mqi" path="res://characters/warrior/cards/warrior_jump.gd" id="2_r67vc"]
+[ext_resource type="AudioStream" uid="uid://df64e7qat73gs" path="res://art/block.ogg" id="3_5b8i5"]
+
+[resource]
+script = ExtResource("2_r67vc")
+id = "warrior_jump"
+type = 1
+rarity = 1
+cost = 1
+icon = ExtResource("1_ntwbr")
+tooltip_text = "[center]Ganhe [color=\"0044ff\"]%s[/color] de block. Exauste 1 carta aleatoria.[/center]"
+sound = ExtResource("3_5b8i5")

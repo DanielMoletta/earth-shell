@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://qd2lt374xj2l"]
+[gd_scene format=3 uid="uid://qd2lt374xj2l"]
 
-[ext_resource type="Script" path="res://scenes/event_rooms/helpful_boi_event.gd" id="1_7infd"]
+[ext_resource type="Script" uid="uid://daaj5vtk5hrpp" path="res://scenes/event_rooms/helpful_boi_event.gd" id="1_7infd"]
 [ext_resource type="PackedScene" uid="uid://br2rpgkb7gbxr" path="res://scenes/event_rooms/event_room_button.tscn" id="1_850a0"]
-[ext_resource type="Texture2D" uid="uid://b1nj6u7dxl3mh" path="res://art/tile_0085.png" id="2_0pbu5"]
 [ext_resource type="Resource" uid="uid://sbkc4o401k4l" path="res://characters/warrior/warrior.tres" id="2_f8c4o"]
+[ext_resource type="Texture2D" uid="uid://kasms6x3pcpq" path="res://art/summer 4/1.png" id="3_ifoy5"]
+[ext_resource type="Texture2D" uid="uid://c0xa70phrp12w" path="res://art/summer6/3.png" id="4_0w5xx"]
+[ext_resource type="Texture2D" uid="uid://bywed8u0fl46f" path="res://art/Basic Asset Pack/Basic Animal Animations/tile_0110.png" id="5_ifoy5"]
 
-[node name="HelpfulBoiEvent" type="Control"]
+[node name="HelpfulBoiEvent" type="Control" unique_id=171697588]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,48 +17,27 @@ grow_vertical = 2
 script = ExtResource("1_7infd")
 character_stats = ExtResource("2_f8c4o")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.193175, 0.0730171, 0.1516, 0.741176)
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=2035947309]
+modulate = Color(0.31527072, 0.234371, 0.15279561, 1)
+layout_mode = 0
+offset_left = -7.0
+offset_top = -21.0
+offset_right = 569.0
+offset_bottom = 303.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_ifoy5")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1591401065]
+modulate = Color(0.72372293, 0.57584304, 0.31729394, 1)
+layout_mode = 0
+offset_left = -9.0
+offset_top = -11.0
+offset_right = 811.0
+offset_bottom = 313.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_0w5xx")
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "helpful boi"
-horizontal_alignment = 1
-
-[node name="DuplicateLastCardButton" parent="VBoxContainer" instance=ExtResource("1_850a0")]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 20)
-layout_mode = 2
-text = "duplicate last card
-in your deck"
-
-[node name="PlusMaxHPButton" parent="VBoxContainer" instance=ExtResource("1_850a0")]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 15)
-layout_mode = 2
-text = "+5 max HP"
-
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1150349446]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -64,10 +45,44 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 60.0
-offset_top = -16.0
+offset_top = -8.0
 offset_right = 100.0
-offset_bottom = 24.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_0pbu5")
+texture = ExtResource("5_ifoy5")
 flip_h = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=798442176]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -38.0
+offset_right = -11.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=608369278]
+layout_mode = 2
+text = "Este carangueijo viu voce
+lutando contra os monstros
+e decidiu te auxiliar"
+horizontal_alignment = 1
+
+[node name="DuplicateLastCardButton" parent="VBoxContainer" unique_id=1179803673 instance=ExtResource("1_850a0")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+text = "Duplicar a ultima carta
+de seu deck"
+
+[node name="PlusMaxHPButton" parent="VBoxContainer" unique_id=532628509 instance=ExtResource("1_850a0")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+text = "+5 HP maximo"

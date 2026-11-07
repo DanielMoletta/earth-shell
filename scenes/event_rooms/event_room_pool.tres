@@ -1,9 +1,16 @@
-[gd_resource type="Resource" script_class="EventRoomPool" load_steps=4 format=3 uid="uid://bncylsfojpqyu"]
+[gd_resource type="Resource" script_class="EventRoomPool" format=3 uid="uid://bncylsfojpqyu"]
 
 [ext_resource type="PackedScene" uid="uid://qd2lt374xj2l" path="res://scenes/event_rooms/helpful_boi_event.tscn" id="1_6hnmb"]
-[ext_resource type="Script" path="res://custom_resources/event_room_pool.gd" id="1_nlwb2"]
+[ext_resource type="PackedScene" uid="uid://bnt47bj4ohbnm" path="res://scenes/event_rooms/acid_spring_event.tscn" id="1_8aya2"]
+[ext_resource type="Script" uid="uid://cwgl0wh3gt4jf" path="res://custom_resources/event_room_pool.gd" id="1_nlwb2"]
 [ext_resource type="PackedScene" uid="uid://g8ya03t8eema" path="res://scenes/event_rooms/gamble_event.tscn" id="2_yy7kk"]
+[ext_resource type="PackedScene" uid="uid://3mwxsefb43gt" path="res://scenes/event_rooms/animal_family_event.tscn" id="3_amie7"]
+[ext_resource type="PackedScene" uid="uid://4k6y0xp72nbe" path="res://scenes/event_rooms/data_terminal_event.tscn" id="3_l71ab"]
+[ext_resource type="PackedScene" uid="uid://c2onrruf0k1a5" path="res://scenes/event_rooms/industrial_monolith_scene.tscn" id="6_yxjdr"]
+[ext_resource type="PackedScene" uid="uid://ir4dwx3ewiq" path="res://scenes/event_rooms/quiet_sprout_event.tscn" id="7_5kcnc"]
+[ext_resource type="PackedScene" uid="uid://hlqwwo5h8hdi" path="res://scenes/event_rooms/seed_vault_event.tscn" id="8_st8tl"]
+[ext_resource type="PackedScene" uid="uid://cnhirp16wjgj4" path="res://scenes/event_rooms/toxic_barrel_event.tscn" id="9_mbpq4"]
 
 [resource]
 script = ExtResource("1_nlwb2")
-event_rooms = Array[PackedScene]([ExtResource("1_6hnmb"), ExtResource("2_yy7kk")])
+event_rooms = Array[PackedScene]([ExtResource("1_8aya2"), ExtResource("3_amie7"), ExtResource("3_l71ab"), ExtResource("2_yy7kk"), ExtResource("1_6hnmb"), ExtResource("6_yxjdr"), ExtResource("7_5kcnc"), ExtResource("8_st8tl"), ExtResource("9_mbpq4")])

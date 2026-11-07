@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="StrikeDefendCard" format=3 uid="uid://bx7dwem3daptn"]
+
+[ext_resource type="Texture2D" uid="uid://cdfde5bas5h7" path="res://art/Basic Asset Pack/Basic Animal Animations/Croaking Toad/warrior_strike_defend.png" id="1_7lnc3"]
+[ext_resource type="Script" uid="uid://pjutrryvobdy" path="res://characters/warrior/cards/warrior_strike_defend.gd" id="2_g8ie0"]
+
+[resource]
+script = ExtResource("2_g8ie0")
+id = "warrior_strike_defend"
+rarity = 1
+target = 1
+cost = 1
+icon = ExtResource("1_7lnc3")
+tooltip_text = "[center]Cause [color=\"ff0000\"]%s[/color] de dano e receba [color=\"0044ff\"]%s[/color] de block[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

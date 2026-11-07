@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WizardIceCard" format=3 uid="uid://fvid4dcupert"]
+
+[ext_resource type="Script" uid="uid://ccrfs6dweqlr1" path="res://characters/wizard/cards/wizard_ice.gd" id="1_3peq7"]
+[ext_resource type="Texture2D" uid="uid://mdqcsgjykvd8" path="res://art/Basic Asset Pack/Basic Animal Animations/Clucking Chicken/wizard_ice.png" id="1_m3t6c"]
+
+[resource]
+script = ExtResource("1_3peq7")
+id = "wizard_ice"
+target = 1
+cost = 1
+icon = ExtResource("1_m3t6c")
+tooltip_text = "[center]Causa [color=\"ff0000\"]%s[/color] de dano e congela por [color=\"00ffff\"]%s[/color] turnos.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

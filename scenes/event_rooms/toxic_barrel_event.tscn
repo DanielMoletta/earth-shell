@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://cnhirp16wjgj4"]
+
+[ext_resource type="Script" uid="uid://dpq76h7beamh2" path="res://scenes/event_rooms/toxic_barrel_event.gd" id="1_s025u"]
+[ext_resource type="Texture2D" uid="uid://b4ch5a5guu30s" path="res://art/summer8/2.png" id="2_s025u"]
+[ext_resource type="Texture2D" uid="uid://7500p6n8wrnw" path="res://art/summer7/3.png" id="3_c6gl1"]
+[ext_resource type="Texture2D" uid="uid://cx7kduvs7kpls" path="res://art/PostApocalypse_AssetPack_v1.1.2/Objects/Barrel_rust_red_2.png" id="4_2nxo7"]
+[ext_resource type="Texture2D" uid="uid://bk158yyyo2l0g" path="res://art/PostApocalypse_AssetPack_v1.1.2/Objects/Nature/Flowers_Mashrooms_Other-nature-stuff/Puddles-And-Water-Anim/Puddle_On-Mud_1.png" id="4_c6gl1"]
+[ext_resource type="Texture2D" uid="uid://dyuc7bp2buq2d" path="res://art/PostApocalypse_AssetPack_v1.1.2/Objects/Barrel_blue_2.png" id="5_0nv3k"]
+[ext_resource type="PackedScene" uid="uid://br2rpgkb7gbxr" path="res://scenes/event_rooms/event_room_button.tscn" id="5_c6gl1"]
+[ext_resource type="Texture2D" uid="uid://dt0ll0ctf1f5p" path="res://art/PostApocalypse_AssetPack_v1.1.2/Objects/Barrel_rust_blue_2.png" id="6_fxcg1"]
+[ext_resource type="Texture2D" uid="uid://cpbhm0dc45vrk" path="res://art/PostApocalypse_AssetPack_v1.1.2/Objects/Barrel_red_2.png" id="7_lb68v"]
+
+[node name="ToxicBarrelEvent" type="Control" unique_id=374081897]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_s025u")
+metadata/_custom_type_script = "uid://cbb1lrt5svuw2"
+
+[node name="Visuals" type="Control" parent="." unique_id=97475110]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background0" type="TextureRect" parent="Visuals" unique_id=699068201]
+modulate = Color(0.68560165, 0.3141925, 0.2506644, 1)
+layout_mode = 0
+offset_left = -42.0
+offset_top = -162.0
+offset_right = 372.0
+offset_bottom = 107.0
+texture = ExtResource("2_s025u")
+expand_mode = 1
+
+[node name="Background1" type="TextureRect" parent="Visuals" unique_id=281579574]
+modulate = Color(0.48935598, 0.21590874, 0.28358808, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -297.0
+offset_top = -216.0
+offset_right = 647.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(288, 288)
+texture = ExtResource("3_c6gl1")
+
+[node name="TextureRect6" type="TextureRect" parent="Visuals" unique_id=1870109582]
+modulate = Color(0.28034258, 0.2791639, 0.3315737, 1)
+layout_mode = 0
+offset_left = 161.0
+offset_top = 112.0
+offset_right = 259.0
+offset_bottom = 142.0
+texture = ExtResource("4_c6gl1")
+
+[node name="TextureRect" type="TextureRect" parent="Visuals" unique_id=1560664389]
+modulate = Color(0.84858304, 0.47942263, 0.34805185, 1)
+layout_mode = 0
+offset_left = 196.0
+offset_top = 100.0
+offset_right = 238.0
+offset_bottom = 130.0
+texture = ExtResource("4_2nxo7")
+
+[node name="TextureRect2" type="TextureRect" parent="Visuals" unique_id=863474832]
+modulate = Color(0.84858304, 0.47942263, 0.34805185, 1)
+layout_mode = 0
+offset_left = 188.0
+offset_top = 92.0
+offset_right = 230.0
+offset_bottom = 122.0
+texture = ExtResource("5_0nv3k")
+
+[node name="TextureRect5" type="TextureRect" parent="Visuals" unique_id=595709619]
+modulate = Color(0.84858304, 0.47942263, 0.34805185, 1)
+layout_mode = 0
+offset_left = 184.0
+offset_top = 74.0
+offset_right = 226.0
+offset_bottom = 104.0
+texture = ExtResource("6_fxcg1")
+
+[node name="TextureRect4" type="TextureRect" parent="Visuals" unique_id=384861554]
+modulate = Color(0.84858304, 0.47942263, 0.34805185, 1)
+layout_mode = 0
+offset_left = 178.0
+offset_top = 91.0
+offset_right = 220.0
+offset_bottom = 121.0
+texture = ExtResource("7_lb68v")
+
+[node name="TextureRect3" type="TextureRect" parent="Visuals" unique_id=683183303]
+modulate = Color(0.84858304, 0.47942263, 0.34805185, 1)
+layout_mode = 0
+offset_left = 176.0
+offset_top = 108.0
+offset_right = 218.0
+offset_bottom = 138.0
+texture = ExtResource("5_0nv3k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=683158597]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = 32.0
+offset_right = 175.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1086303451]
+layout_mode = 2
+text = "Um lote de tambores industriais 
+abandonados esta vazando residuos. 
+Voce pode tentar conter o 
+vazamento com os objetos ao redor, 
+mas corre o risco de se contaminar."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CleanUpButton" parent="VBoxContainer" unique_id=251640937 instance=ExtResource("5_c6gl1")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 20)
+layout_mode = 2
+text = "Conter o vazamento 
+(Perde 10% do HP max)"
+
+[node name="ScavengeButton" parent="VBoxContainer" unique_id=1155890439 instance=ExtResource("5_c6gl1")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Recuperar ferramentas largadas
+ao lado dos barris"
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=818337913]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BurningStatus" format=3 uid="uid://bd3na1lk334me"]
+
+[ext_resource type="Texture2D" uid="uid://f7tgpjiguspe" path="res://art/tile_0129.png" id="1_brrpt"]
+[ext_resource type="Script" uid="uid://bblh3o1hfk7mb" path="res://statuses/burning.gd" id="2_brrpt"]
+
+[resource]
+script = ExtResource("2_brrpt")
+id = "burning"
+stack_type = 2
+can_expire = true
+duration = 2
+icon = ExtResource("1_brrpt")
+tooltip = "Queimadura: recebe %s de dano por %s turnos."
+metadata/_custom_type_script = "uid://bgw186o0jltl8"

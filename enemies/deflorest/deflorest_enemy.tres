@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyStats" format=3 uid="uid://c8u4vlniew7wt"]
+
+[ext_resource type="PackedScene" uid="uid://bx6ev0ad2f4rj" path="res://enemies/deflorest/deflorest_enemy_ai.tscn" id="1_tocp2"]
+[ext_resource type="Texture2D" uid="uid://54y14oso5tls" path="res://art/deflorest.png" id="2_nl2f8"]
+[ext_resource type="Script" uid="uid://cqw6nj5nsigxl" path="res://custom_resources/enemy_stats.gd" id="3_6f6cv"]
+
+[resource]
+script = ExtResource("3_6f6cv")
+ai = ExtResource("1_tocp2")
+max_health = 25
+art = ExtResource("2_nl2f8")

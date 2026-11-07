@@ -4,9 +4,9 @@ extends Control
 const CARD_REWARDS = preload("res://scenes/ui/card_rewards.tscn")
 const REWARD_BUTTON = preload("res://scenes/ui/reward_button.tscn")
 const GOLD_ICON := preload("res://art/gold.png")
-const GOLD_TEXT := "%s gold"
+const GOLD_TEXT := "%s de gold"
 const CARD_ICON := preload("res://art/rarity.png")
-const CARD_TEXT := "Add New Card"
+const CARD_TEXT := "Adicionar nova carta"
 
 @export var run_stats: RunStats
 @export var character_stats: CharacterStats
@@ -66,16 +66,25 @@ func _show_card_rewards() -> void:
 	var available_cards: Array[Card] = character_stats.draftable_cards.duplicate_cards()
 	
 	for i in run_stats.card_rewards:
+		if available_cards.is_empty():
+			break
+			
 		_setup_card_chances()
 		var roll := RNG.instance.randf_range(0.0, card_reward_total_weight)
 		
+		var picked_card: Card = null
 		for rarity: Card.Rarity in card_rarity_weights:
 			if card_rarity_weights[rarity] > roll:
 				_modify_weights(rarity)
-				var picked_card := _get_random_available_card(available_cards, rarity)
-				card_reward_array.append(picked_card)
-				available_cards.erase(picked_card)
+				picked_card = _get_random_available_card(available_cards, rarity)
 				break
+		
+		if not picked_card and not available_cards.is_empty():
+			picked_card = RNG.array_pick_random(available_cards)
+		
+		if picked_card:
+			card_reward_array.append(picked_card)
+			available_cards.erase(picked_card)
 
 	card_rewards.rewards = card_reward_array
 	card_rewards.show()
@@ -100,6 +109,10 @@ func _get_random_available_card(available_cards: Array[Card], with_rarity: Card.
 		func(card: Card):
 			return card.rarity == with_rarity
 	)
+	
+	if all_possible_cards.is_empty():
+		return null
+		
 	return RNG.array_pick_random(all_possible_cards)
 
 

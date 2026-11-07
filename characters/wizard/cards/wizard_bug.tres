@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://brd7mhhi0o41l"]
+
+[ext_resource type="Script" uid="uid://dubssm8buhtex" path="res://characters/wizard/cards/wizard_bug.gd" id="1_3b6lc"]
+[ext_resource type="Texture2D" uid="uid://d3sqv42imfcra" path="res://art/Basic Asset Pack/Basic Animal Animations/Clucking Chicken/wizard_bug.png" id="1_dr4qa"]
+
+[resource]
+script = ExtResource("1_3b6lc")
+id = "wizard_bug"
+type = 1
+rarity = 1
+cost = 1
+icon = ExtResource("1_dr4qa")
+tooltip_text = "[center]Ganhe [color=\"0044ff\"]%s[/color] de vida.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

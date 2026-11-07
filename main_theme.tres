@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dskmdk146n4rq" path="res://art/pixel_rpg.ttf" id="1_nmkrf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8u4k"]
-bg_color = Color(0.631373, 0.34902, 0.321569, 0.501961)
+bg_color = Color(0.6313726, 0.34901962, 0.32156864, 0.69411767)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1

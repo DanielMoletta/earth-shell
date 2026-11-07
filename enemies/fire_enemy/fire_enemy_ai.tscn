@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cmgl5ddcdf1pp"]
+
+[ext_resource type="Script" uid="uid://barodhbbtiqbj" path="res://scenes/enemy/enemy_action_picker.gd" id="1_ge3ic"]
+[ext_resource type="Script" uid="uid://mjh55y2vkqwf" path="res://enemies/fire_enemy/fire_enemy_attack_action.gd" id="2_xil3v"]
+[ext_resource type="Texture2D" uid="uid://f7tgpjiguspe" path="res://art/tile_0129.png" id="3_a5ue2"]
+[ext_resource type="Script" uid="uid://dxgwh7ui04omh" path="res://custom_resources/intent.gd" id="4_1txr0"]
+[ext_resource type="Script" uid="uid://dlbxrdjufd5rk" path="res://enemies/fire_enemy/fire_enemy_block_action.gd" id="5_1txr0"]
+[ext_resource type="Texture2D" uid="uid://bi6pfjs32f820" path="res://art/tile_0101.png" id="6_qbxk0"]
+
+[sub_resource type="Resource" id="Resource_yeiif"]
+script = ExtResource("4_1txr0")
+base_text = "2"
+icon = ExtResource("3_a5ue2")
+metadata/_custom_type_script = "uid://dxgwh7ui04omh"
+
+[sub_resource type="Resource" id="Resource_vnn0b"]
+script = ExtResource("4_1txr0")
+base_text = "8"
+icon = ExtResource("6_qbxk0")
+metadata/_custom_type_script = "uid://dxgwh7ui04omh"
+
+[node name="FireEnemyAi" type="Node" unique_id=694711048]
+script = ExtResource("1_ge3ic")
+metadata/_custom_type_script = "uid://biw37txgb42bf"
+
+[node name="AttackAction" type="Node" parent="." unique_id=728232740]
+script = ExtResource("2_xil3v")
+intent = SubResource("Resource_yeiif")
+type = 1
+chance_weight = 1.5
+
+[node name="BlockAction" type="Node" parent="." unique_id=445857158]
+script = ExtResource("5_1txr0")
+intent = SubResource("Resource_vnn0b")
+chance_weight = 2.0

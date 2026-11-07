@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2jq2r5hb1ajk"]
+[gd_scene format=3 uid="uid://d2jq2r5hb1ajk"]
 
-[ext_resource type="Script" path="res://scenes/ui/card_pile_view.gd" id="1_b4itw"]
+[ext_resource type="Script" uid="uid://bqdmfscl6uywh" path="res://scenes/ui/card_pile_view.gd" id="1_b4itw"]
 [ext_resource type="PackedScene" uid="uid://trmdo65td4t7" path="res://scenes/ui/card_menu_ui.tscn" id="1_yhny2"]
 [ext_resource type="PackedScene" uid="uid://c743ur8hoxsn5" path="res://scenes/ui/card_tooltip_popup.tscn" id="3_0v1cn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tpixj"]
 font_size = 12
 
-[node name="CardPileView" type="Control"]
+[node name="CardPileView" type="Control" unique_id=2046320206]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -18,7 +18,7 @@ grow_vertical = 2
 mouse_force_pass_scroll_events = false
 script = ExtResource("1_b4itw")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=136683359]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,7 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.65098)
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=826420554]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,25 +39,25 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1827176139]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1911785927]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Discard Pile"
+text = "Pilha de Descarte"
 label_settings = SubResource("LabelSettings_tpixj")
 horizontal_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=58570052]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_force_pass_scroll_events = false
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 2
 
-[node name="Cards" type="GridContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="Cards" type="GridContainer" parent="MarginContainer/VBoxContainer/ScrollContainer" unique_id=598071484]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -66,79 +66,79 @@ theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 8
 columns = 6
 
-[node name="CardMenuUI" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=1943022544 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI2" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI2" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=1095660996 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI3" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI3" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=1746298150 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI4" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI4" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=1983592456 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI5" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI5" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=1036931422 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI6" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI6" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=1878330350 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI7" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI7" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=1179933047 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI8" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI8" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=262860173 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI9" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI9" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=159160614 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI10" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI10" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=632231887 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI11" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI11" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=1083499305 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI12" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI12" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=2106657430 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI13" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI13" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=973807163 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI14" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI14" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=903929351 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI15" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI15" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=1178603861 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI16" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI16" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=798623735 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI17" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI17" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=32452052 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI18" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI18" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=398138428 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI19" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI19" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=953459411 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI20" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI20" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=24839785 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI21" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI21" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=150575307 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI22" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI22" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=475499016 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI23" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI23" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=1339287911 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="CardMenuUI24" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" instance=ExtResource("1_yhny2")]
+[node name="CardMenuUI24" parent="MarginContainer/VBoxContainer/ScrollContainer/Cards" unique_id=557985303 instance=ExtResource("1_yhny2")]
 layout_mode = 2
 
-[node name="BackButton" type="Button" parent="."]
+[node name="BackButton" type="Button" parent="." unique_id=589058195]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 1
@@ -149,9 +149,9 @@ offset_top = 7.0
 offset_right = -10.0
 offset_bottom = 21.0
 grow_horizontal = 0
-text = "Back"
+text = "Voltar"
 
-[node name="CardTooltipPopup" parent="." instance=ExtResource("3_0v1cn")]
+[node name="CardTooltipPopup" parent="." unique_id=96053504 instance=ExtResource("3_0v1cn")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1

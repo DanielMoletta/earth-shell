@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://cax1tkpl48mia"]
+
+[ext_resource type="Texture2D" uid="uid://dsv07c1fqo6w5" path="res://art/Basic Asset Pack/Basic Animal Animations/Clucking Chicken/wizard_thunder.png" id="1_s7qc2"]
+[ext_resource type="Script" uid="uid://kdndgvt23a10" path="res://characters/wizard/cards/wizard_thunder.gd" id="1_s43v0"]
+
+[resource]
+script = ExtResource("1_s43v0")
+id = "wizard_thunder"
+target = 1
+cost = 2
+icon = ExtResource("1_s7qc2")
+tooltip_text = "[center]Causa [color=\"ff0000\"]%s[/color] de dano e aplica [color=\"ffff00\"]%s[/color] de exposto.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

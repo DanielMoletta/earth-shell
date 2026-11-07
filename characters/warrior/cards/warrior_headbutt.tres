@@ -1,0 +1,16 @@
+[gd_resource type="Resource" format=3 uid="uid://d20gx8xpmgpdi"]
+
+[ext_resource type="Texture2D" uid="uid://dlsm778yyhmjv" path="res://art/Basic Asset Pack/Basic Animal Animations/Croaking Toad/warrior_headbutt.png" id="1_18g30"]
+[ext_resource type="Script" uid="uid://ceja2u7a7dre4" path="res://characters/warrior/cards/warrior_headbutt.gd" id="2_siq50"]
+[ext_resource type="AudioStream" uid="uid://dixklg6g4jnsq" path="res://art/slash.ogg" id="3_a05q2"]
+
+[resource]
+script = ExtResource("2_siq50")
+id = "warrior_headbutt"
+rarity = 1
+target = 1
+cost = 2
+exhausts = true
+icon = ExtResource("1_18g30")
+tooltip_text = "[center]Cause [color=\"ff0000\"]%s[/color] de dano e aplique 2 [color=\"ffdf00\"]Exposto[/color].[/center]"
+sound = ExtResource("3_a05q2")

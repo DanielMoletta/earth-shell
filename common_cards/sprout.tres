@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://db0gxmar620cj"]
+
+[ext_resource type="Texture2D" uid="uid://dto026w527or0" path="res://art/tree.png" id="1_pgwof"]
+[ext_resource type="Script" uid="uid://d18phxy00jaxn" path="res://common_cards/sprout.gd" id="2_b2urg"]
+
+[resource]
+script = ExtResource("2_b2urg")
+id = "sprout"
+type = 1
+rarity = 1
+icon = ExtResource("1_pgwof")
+tooltip_text = "[center]Bloqueie por [color=\"0044ff\"]%s[/color] e ganhe [color=\"#00ff3c\"]%s[/color] de vida.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

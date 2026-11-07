@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardPile" format=3 uid="uid://cs16s8ifncvku"]
+
+[ext_resource type="Script" uid="uid://bg8nmus47b34h" path="res://custom_resources/card.gd" id="1_2d2il"]
+[ext_resource type="Resource" uid="uid://cn741xodlkolv" path="res://characters/wizard/cards/wizard_block.tres" id="2_abmy5"]
+[ext_resource type="Script" uid="uid://cx7pv6t0wf8e" path="res://custom_resources/card_pile.gd" id="2_ae0ud"]
+[ext_resource type="Resource" uid="uid://dhgxp7tyr3fh5" path="res://characters/wizard/cards/wizard_fire.tres" id="3_4dphi"]
+[ext_resource type="Resource" uid="uid://fvid4dcupert" path="res://characters/wizard/cards/wizard_ice.tres" id="4_s5pve"]
+[ext_resource type="Resource" uid="uid://brd7mhhi0o41l" path="res://characters/wizard/cards/wizard_bug.tres" id="5_abmy5"]
+
+[resource]
+script = ExtResource("2_ae0ud")
+cards = Array[ExtResource("1_2d2il")]([ExtResource("2_abmy5"), ExtResource("2_abmy5"), ExtResource("2_abmy5"), ExtResource("2_abmy5"), ExtResource("2_abmy5"), ExtResource("3_4dphi"), ExtResource("3_4dphi"), ExtResource("4_s5pve"), ExtResource("4_s5pve"), ExtResource("5_abmy5")])
+metadata/_custom_type_script = "uid://cx7pv6t0wf8e"

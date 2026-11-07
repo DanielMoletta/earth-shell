@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://cjumphowmem7x"]
+
+[ext_resource type="Script" uid="uid://cpnah1xxduefc" path="res://characters/wizard/cards/wizard_reflect.gd" id="1_kh1an"]
+[ext_resource type="Texture2D" uid="uid://cmbpf4yp7j8kt" path="res://art/Basic Asset Pack/Basic Animal Animations/Clucking Chicken/wizard_reflect.png" id="1_mnief"]
+
+[resource]
+script = ExtResource("1_kh1an")
+id = "wizard_reflect"
+type = 2
+rarity = 1
+cost = 3
+exhausts = true
+icon = ExtResource("1_mnief")
+tooltip_text = "[center]Recebe o efeito refletir por [color=\\\"0044ff\\\"]%s[/color] turnos.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

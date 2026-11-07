@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BattleStats" format=3 uid="uid://b11s7ap0kcf8h"]
+
+[ext_resource type="PackedScene" uid="uid://b7k8x525sdrsy" path="res://battles/tier_1/tier_1_fire_enemy_and_bat2.tscn" id="1_8esw4"]
+[ext_resource type="Script" uid="uid://bo2yy3tbqpsl" path="res://custom_resources/battle_stats.gd" id="2_otpfg"]
+
+[resource]
+script = ExtResource("2_otpfg")
+battle_tier = 1
+weight = 2.0
+gold_reward_min = 175
+gold_reward_max = 200
+enemies = ExtResource("1_8esw4")
+metadata/_custom_type_script = "uid://bo2yy3tbqpsl"

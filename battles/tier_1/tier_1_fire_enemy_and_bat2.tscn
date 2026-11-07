@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b7k8x525sdrsy"]
+
+[ext_resource type="PackedScene" uid="uid://d0efyathkfg74" path="res://scenes/enemy/enemy.tscn" id="1_fiihh"]
+[ext_resource type="Resource" uid="uid://rd0y8sngbioi" path="res://enemies/fire_enemy/fire_enemy.tres" id="2_wyfel"]
+[ext_resource type="Resource" uid="uid://bbo24od4aavfj" path="res://enemies/bat/bat_enemy.tres" id="3_4gwtj"]
+
+[node name="Tier1FireEnemy2" type="Node2D" unique_id=217267165]
+
+[node name="Enemy" parent="." unique_id=1146285022 instance=ExtResource("1_fiihh")]
+position = Vector2(168, 86)
+stats = ExtResource("2_wyfel")
+
+[node name="Enemy2" parent="." unique_id=9778965 instance=ExtResource("1_fiihh")]
+position = Vector2(222, 78)
+stats = ExtResource("3_4gwtj")
+
+[node name="Enemy3" parent="." unique_id=504318575 instance=ExtResource("1_fiihh")]
+position = Vector2(128, 55)
+stats = ExtResource("3_4gwtj")

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardPile" format=3 uid="uid://bgf0doydg06e8"]
+
+[ext_resource type="Script" uid="uid://bg8nmus47b34h" path="res://custom_resources/card.gd" id="1_mgkch"]
+[ext_resource type="Script" uid="uid://cx7pv6t0wf8e" path="res://custom_resources/card_pile.gd" id="2_co65v"]
+[ext_resource type="Resource" uid="uid://d4bxnuxyngr8l" path="res://characters/wizard/cards/wizard_big_block.tres" id="2_nxjmw"]
+[ext_resource type="Resource" uid="uid://38ggiuwgiulv" path="res://characters/wizard/cards/wizard_duplicate.tres" id="3_vfukg"]
+[ext_resource type="Resource" uid="uid://brd7mhhi0o41l" path="res://characters/wizard/cards/wizard_bug.tres" id="4_o7wvl"]
+[ext_resource type="Resource" uid="uid://bcgk6cbmtabxc" path="res://characters/wizard/cards/wizard_buytwo.tres" id="5_75jc4"]
+[ext_resource type="Resource" uid="uid://dhgxp7tyr3fh5" path="res://characters/wizard/cards/wizard_fire.tres" id="6_3wxke"]
+[ext_resource type="Resource" uid="uid://fvid4dcupert" path="res://characters/wizard/cards/wizard_ice.tres" id="7_c3q1b"]
+[ext_resource type="Resource" uid="uid://cjumphowmem7x" path="res://characters/wizard/cards/wizard_reflect.tres" id="8_6jk8x"]
+[ext_resource type="Resource" uid="uid://cax1tkpl48mia" path="res://characters/wizard/cards/wizard_thunder.tres" id="9_0w0xm"]
+[ext_resource type="Resource" uid="uid://b3nbthpv5106d" path="res://characters/wizard/cards/wizard_wind.tres" id="10_rxka7"]
+
+[resource]
+script = ExtResource("2_co65v")
+cards = Array[ExtResource("1_mgkch")]([ExtResource("2_nxjmw"), ExtResource("3_vfukg"), ExtResource("4_o7wvl"), ExtResource("4_o7wvl"), ExtResource("5_75jc4"), ExtResource("5_75jc4"), ExtResource("6_3wxke"), ExtResource("7_c3q1b"), ExtResource("8_6jk8x"), ExtResource("8_6jk8x"), ExtResource("9_0w0xm"), ExtResource("9_0w0xm"), ExtResource("10_rxka7"), ExtResource("10_rxka7")])
+metadata/_custom_type_script = "uid://cx7pv6t0wf8e"

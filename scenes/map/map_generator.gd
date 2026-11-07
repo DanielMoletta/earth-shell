@@ -8,7 +8,7 @@ const FLOORS := 15
 const MAP_WIDTH := 7
 const PATHS := 6
 const MONSTER_ROOM_WEIGHT := 12.0
-const EVENT_ROOM_WEIGHT := 5.0
+const EVENT_ROOM_WEIGHT := 7.0
 const SHOP_ROOM_WEIGHT := 2.5
 const CAMPFIRE_ROOM_WEIGHT := 4.0
 

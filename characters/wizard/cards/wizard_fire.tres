@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://dhgxp7tyr3fh5"]
+
+[ext_resource type="Script" uid="uid://dnt5usn0w4unf" path="res://characters/wizard/cards/wizard_fire.gd" id="1_1ywvb"]
+[ext_resource type="Texture2D" uid="uid://s8fvi1i6igby" path="res://art/Basic Asset Pack/Basic Animal Animations/Clucking Chicken/wizard_fire.png" id="1_m1imd"]
+
+[resource]
+script = ExtResource("1_1ywvb")
+id = "wizard_fire"
+target = 1
+cost = 1
+icon = ExtResource("1_m1imd")
+tooltip_text = "[center]Causa [color=\"ff0000\"]%s[/color] de dano e queima por [color=\"ff7700\"]%s[/color] turnos.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

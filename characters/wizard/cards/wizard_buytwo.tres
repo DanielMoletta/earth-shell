@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://bcgk6cbmtabxc"]
+
+[ext_resource type="Script" uid="uid://cpi2hcaama0yv" path="res://characters/wizard/cards/wizard_buytwo.gd" id="1_53qdu"]
+[ext_resource type="Texture2D" uid="uid://cic32mkbd2ixr" path="res://art/Basic Asset Pack/Basic Animal Animations/Clucking Chicken/wizard_buytwo.png" id="1_y4opb"]
+
+[resource]
+script = ExtResource("1_53qdu")
+id = "wizard_buytwo"
+type = 1
+rarity = 1
+cost = 1
+exhausts = true
+icon = ExtResource("1_y4opb")
+tooltip_text = "[center]Compre duas cartas[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

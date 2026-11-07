@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwtke8nmynqt2"]
+[gd_scene format=3 uid="uid://bwtke8nmynqt2"]
 
-[ext_resource type="Script" path="res://scenes/relic_handler/relic_tooltip.gd" id="1_qps86"]
+[ext_resource type="Script" uid="uid://dujfvn5rjpaem" path="res://scenes/relic_handler/relic_tooltip.gd" id="1_qps86"]
 [ext_resource type="Texture2D" uid="uid://bxa8pkakcodgw" path="res://art/tile_0082.png" id="2_133u3"]
 
-[node name="RelicTooltip" type="Control"]
+[node name="RelicTooltip" type="Control" unique_id=1470837398]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qps86")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=220002263]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +22,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0.690196)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=716975338]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -36,14 +36,14 @@ offset_bottom = 26.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RelicIcon" type="TextureRect" parent="VBoxContainer"]
+[node name="RelicIcon" type="TextureRect" parent="VBoxContainer" unique_id=1613542686]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 texture = ExtResource("2_133u3")
 stretch_mode = 5
 
-[node name="RelicTooltip" type="RichTextLabel" parent="VBoxContainer"]
+[node name="RelicTooltip" type="RichTextLabel" parent="VBoxContainer" unique_id=1863736862]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
@@ -52,7 +52,7 @@ bbcode_enabled = true
 text = "Relic Tooltip Relic Tooltip Relic Tooltip Relic Tooltip Relic Tooltip Relic Tooltip Relic Tooltip Relic Tooltip Relic Tooltip Relic Tooltip"
 fit_content = true
 
-[node name="BackButton" type="Button" parent="."]
+[node name="BackButton" type="Button" parent="." unique_id=1836384562]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 1
@@ -63,6 +63,6 @@ offset_top = 5.0
 offset_right = -5.0
 offset_bottom = 19.0
 grow_horizontal = 0
-text = "Back"
+text = "Voltar"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

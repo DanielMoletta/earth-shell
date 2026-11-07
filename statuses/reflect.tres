@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ReflectStatus" format=3 uid="uid://chd2n1gnany7r"]
+
+[ext_resource type="Script" uid="uid://c8s4y7jviim6s" path="res://statuses/reflect.gd" id="1_3tn6j"]
+[ext_resource type="Texture2D" uid="uid://bi6pfjs32f820" path="res://art/tile_0101.png" id="1_b4asy"]
+
+[resource]
+script = ExtResource("1_3tn6j")
+id = "Refletir"
+stack_type = 2
+can_expire = true
+duration = 2
+icon = ExtResource("1_b4asy")
+tooltip = "Refletir: concede %s de block no início de cada turno por %s turnos."

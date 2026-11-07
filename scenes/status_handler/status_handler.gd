@@ -39,6 +39,10 @@ func add_status(status: Status) -> void:
 		new_status_ui.status = status
 		new_status_ui.status.status_applied.connect(_on_status_applied)
 		new_status_ui.status.initialize_status(status_owner)
+		
+		if status_owner and status_owner.has_method("update_intent"):
+			status_owner.update_intent()
+			
 		return
 
 	# If it's unique and we already have it, we can return
@@ -48,11 +52,18 @@ func add_status(status: Status) -> void:
 	# If it's duration-stackable, expand it
 	if status.can_expire and status.stack_type == Status.StackType.DURATION:
 		_get_status(status.id).duration += status.duration
+		
+		if status_owner and status_owner.has_method("update_intent"):
+			status_owner.update_intent()
+			
 		return
 	
 	# If it's stackable, stack it
 	if status.stack_type == Status.StackType.INTENSITY:
 		_get_status(status.id).stacks += status.stacks
+		
+		if status_owner and status_owner.has_method("update_intent"):
+			status_owner.update_intent()
 	
 
 func _has_status(id: String) -> bool:

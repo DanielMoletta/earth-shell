@@ -16,4 +16,4 @@ func set_card(value: Card) -> void:
 	card = value
 	cost.text = str(card.cost)
 	icon.texture = card.icon
-	rarity.modulate = Card.RARITY_COLORS[card.rarity]
+	panel.modulate = Card.RARITY_COLORS[card.rarity]

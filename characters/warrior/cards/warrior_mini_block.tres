@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://cjmd5p8y455xc"]
+
+[ext_resource type="Texture2D" uid="uid://cblciuuji6iv5" path="res://art/Basic Asset Pack/Basic Animal Animations/Croaking Toad/warrior_mini_block.png" id="1_fwi1u"]
+[ext_resource type="Script" uid="uid://b8mccvjthyyyx" path="res://characters/warrior/cards/warrior_mini_block.gd" id="2_77v0m"]
+[ext_resource type="AudioStream" uid="uid://k8m4o3hlwm7l" path="res://art/enemy_block.ogg" id="3_qbego"]
+
+[resource]
+script = ExtResource("2_77v0m")
+id = "warrior_mini_block"
+type = 1
+rarity = 1
+icon = ExtResource("1_fwi1u")
+tooltip_text = "[center]Receba [color=\"0044ff\"]%s[/color] de block. Ganhe 1 carta.[/center]"
+sound = ExtResource("3_qbego")

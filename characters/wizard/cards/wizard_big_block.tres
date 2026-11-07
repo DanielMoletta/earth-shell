@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://d4bxnuxyngr8l"]
+
+[ext_resource type="Texture2D" uid="uid://ddp2tpcrj6wu3" path="res://art/Basic Asset Pack/Basic Animal Animations/Clucking Chicken/wizard_big_block.png" id="1_1jach"]
+[ext_resource type="Script" uid="uid://cty8yl2hsc2vn" path="res://characters/wizard/cards/wizard_big_block.gd" id="1_h6wyp"]
+
+[resource]
+script = ExtResource("1_h6wyp")
+id = "wizard_big_block"
+type = 1
+rarity = 2
+cost = 1
+exhausts = true
+icon = ExtResource("1_1jach")
+tooltip_text = "[center]Ganhe [color=\"0044ff\"]%s[/color] de block.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bx6ev0ad2f4rj"]
+
+[ext_resource type="Script" uid="uid://barodhbbtiqbj" path="res://scenes/enemy/enemy_action_picker.gd" id="1_0l0iu"]
+[ext_resource type="Script" uid="uid://ke7qh60txsex" path="res://enemies/deflorest/deflorest_attack_action.gd" id="2_f1ibj"]
+[ext_resource type="Script" uid="uid://cdr7gk01mp31k" path="res://enemies/deflorest/deflorest_block_action.gd" id="3_q5oxb"]
+[ext_resource type="Texture2D" uid="uid://cul5qoemvh5nu" path="res://art/attack_negative.png" id="3_t66ly"]
+[ext_resource type="Script" uid="uid://dxgwh7ui04omh" path="res://custom_resources/intent.gd" id="4_apjft"]
+[ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/tile_0102.png" id="6_2u4au"]
+
+[sub_resource type="Resource" id="Resource_q5oxb"]
+script = ExtResource("4_apjft")
+base_text = "6"
+icon = ExtResource("3_t66ly")
+metadata/_custom_type_script = "uid://dxgwh7ui04omh"
+
+[sub_resource type="Resource" id="Resource_f1ibj"]
+script = ExtResource("4_apjft")
+base_text = "5"
+icon = ExtResource("6_2u4au")
+metadata/_custom_type_script = "uid://dxgwh7ui04omh"
+
+[node name="DeflorestEnemyAI" type="Node" unique_id=411842668]
+script = ExtResource("1_0l0iu")
+
+[node name="DeflorestAttackAction" type="Node" parent="." unique_id=1110633049]
+script = ExtResource("2_f1ibj")
+intent = SubResource("Resource_q5oxb")
+type = 1
+chance_weight = 1.0
+
+[node name="DeflorestBlockAction" type="Node" parent="." unique_id=1003981281]
+script = ExtResource("3_q5oxb")
+intent = SubResource("Resource_f1ibj")
+type = 1
+chance_weight = 0.3

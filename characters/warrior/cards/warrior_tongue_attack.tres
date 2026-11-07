@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://btxc1odh1jmst"]
+
+[ext_resource type="Texture2D" uid="uid://brrvh3j2p3yr" path="res://art/Basic Asset Pack/Basic Animal Animations/Croaking Toad/warrior_tongue_attack.png" id="1_y7ycc"]
+[ext_resource type="Script" uid="uid://cqv08ekkasvej" path="res://characters/warrior/cards/warrior_tongue_attack.gd" id="2_senhc"]
+[ext_resource type="AudioStream" uid="uid://b1vpjjmi5cj3n" path="res://art/axe.ogg" id="3_k2khe"]
+
+[resource]
+script = ExtResource("2_senhc")
+id = "warrior_tongue_attack"
+target = 1
+cost = 1
+icon = ExtResource("1_y7ycc")
+tooltip_text = "[center]Cause [color=\"ff0000\"]%s[/color] de dano.[/center]"
+sound = ExtResource("3_k2khe")

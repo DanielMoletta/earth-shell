@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://c8g8a5tx1sr2p"]
+
+[ext_resource type="Texture2D" uid="uid://dr7g7f6wtgawd" path="res://art/Basic Asset Pack/Basic Animal Animations/Croaking Toad/warrior_fly.png" id="1_2jgcy"]
+[ext_resource type="Script" uid="uid://c2t6cr4qa36ga" path="res://characters/warrior/cards/warrior_fly.gd" id="2_xj414"]
+[ext_resource type="AudioStream" uid="uid://cnqve7dtqjghp" path="res://art/true_strength.ogg" id="3_3snnp"]
+
+[resource]
+script = ExtResource("2_xj414")
+id = "warrior_fly"
+type = 2
+rarity = 2
+cost = 3
+icon = ExtResource("1_2jgcy")
+tooltip_text = "[center]No comeco de seu turno, ganhe 2 [color=\"ffdf00\"]Musculos[/color].[/center]"
+sound = ExtResource("3_3snnp")
