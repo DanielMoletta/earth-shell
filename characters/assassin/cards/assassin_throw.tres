@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://d3a4s1wmjnh7n"]
+
+[ext_resource type="Texture2D" uid="uid://i8pmbftk5or2" path="res://art/Basic Asset Pack/Basic Animal Animations/Stinky Skunk/assassin_throw.png" id="1_ffluo"]
+[ext_resource type="Script" uid="uid://devjjnb2800md" path="res://characters/assassin/cards/assassin_throw.gd" id="2_hfjla"]
+
+[resource]
+script = ExtResource("2_hfjla")
+id = "assassin_throw"
+rarity = 2
+target = 1
+cost = 2
+icon = ExtResource("1_ffluo")
+tooltip_text = "[center]Cause [color=\"ff0000\"]%s[/color] de dano, +%s de dano neste combate[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

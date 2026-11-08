@@ -23,7 +23,7 @@ run_startup = ExtResource("2_4poyw")
 metadata/_edit_lock_ = true
 
 [node name="Background" type="TextureRect" parent="." unique_id=1160244377]
-modulate = Color(0.84294546, 0.7457196, 0.62834513, 1)
+modulate = Color(0.77453685, 0.4027351, 0.2541107, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -79,7 +79,12 @@ offset_right = 30.0
 offset_bottom = 59.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 8
+theme_override_constants/separation = 6
+
+[node name="Tutorial" type="Button" parent="VBoxContainer" unique_id=1119345309]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+text = "Tutorial"
 
 [node name="Continue" type="Button" parent="VBoxContainer" unique_id=364652745]
 unique_name_in_owner = true
@@ -130,6 +135,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("10_8g5eo")
 flip_h = true
 
+[connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/NewRun" to="." method="_on_new_run_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

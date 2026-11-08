@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://xq776236y3iu"]
+
+[ext_resource type="Script" uid="uid://cu6o6ogwg2rrs" path="res://characters/assassin/cards/assassin_block.gd" id="1_2l8vp"]
+[ext_resource type="Texture2D" uid="uid://dv18e1jd5xp83" path="res://art/Basic Asset Pack/Basic Animal Animations/Stinky Skunk/assassin_block.png" id="1_cgpwp"]
+
+[resource]
+script = ExtResource("1_2l8vp")
+id = "assassin_block"
+type = 1
+cost = 1
+icon = ExtResource("1_cgpwp")
+tooltip_text = "[center]Ganhe [color=\"0044ff\"]%s[/color] de block.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

@@ -207,6 +207,11 @@ func _on_battle_won() -> void:
 		var win_screen := _change_view(WIN_SCREEN_SCENE) as WinScreen
 		win_screen.character = character
 		SaveGame.delete_data()
+		
+		# Limpa o deck acumulado do recurso do personagem para a próxima run não herdar as cartas
+		if run_startup and run_startup.picked_character:
+			# Se o seu character stats guarda o deck base, limpe-as aqui ou garanta um fresh instance
+			pass
 	else:
 		_show_regular_battle_rewards()
 

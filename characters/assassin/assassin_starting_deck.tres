@@ -2,7 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bg8nmus47b34h" path="res://custom_resources/card.gd" id="1_fg6dr"]
 [ext_resource type="Script" uid="uid://cx7pv6t0wf8e" path="res://custom_resources/card_pile.gd" id="2_b4fwa"]
+[ext_resource type="Resource" uid="uid://xq776236y3iu" path="res://characters/assassin/cards/assassin_block.tres" id="2_rd37i"]
+[ext_resource type="Resource" uid="uid://cfs1cmodpt2n1" path="res://characters/assassin/cards/assassin_claw.tres" id="3_c1hr0"]
+[ext_resource type="Resource" uid="uid://ldvli4ttc73j" path="res://characters/assassin/cards/assassin_fang.tres" id="4_cw2eh"]
+[ext_resource type="Resource" uid="uid://ctrej43wulklc" path="res://characters/assassin/cards/assassin_steal.tres" id="5_5pwyx"]
 
 [resource]
 script = ExtResource("2_b4fwa")
+cards = Array[ExtResource("1_fg6dr")]([ExtResource("2_rd37i"), ExtResource("2_rd37i"), ExtResource("2_rd37i"), ExtResource("2_rd37i"), ExtResource("3_c1hr0"), ExtResource("3_c1hr0"), ExtResource("3_c1hr0"), ExtResource("3_c1hr0"), ExtResource("4_cw2eh"), ExtResource("5_5pwyx")])
 metadata/_custom_type_script = "uid://cx7pv6t0wf8e"

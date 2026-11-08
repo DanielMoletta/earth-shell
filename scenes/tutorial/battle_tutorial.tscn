@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://cc8owrigbl5d1"]
+
+[ext_resource type="Script" uid="uid://ce4mkvpbvegd6" path="res://scenes/tutorial/battle_tutorial.gd" id="1_y2wn6"]
+[ext_resource type="PackedScene" uid="uid://cahno8aso5net" path="res://scenes/battle/battle.tscn" id="2_006x4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ag5k5"]
+bg_color = Color(0.22230336, 0.29157203, 0.449165, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2wn6"]
+bg_color = Color(0.5137255, 0.6, 0.7882353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_006x4"]
+bg_color = Color(0.140822, 0.19106552, 0.30572852, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igse4"]
+bg_color = Color(0.35004553, 0.43875775, 0.63783026, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="BattleTutorial" type="Node2D" unique_id=1367290852]
+process_mode = 3
+script = ExtResource("1_y2wn6")
+
+[node name="Battle" parent="." unique_id=1497759542 instance=ExtResource("2_006x4")]
+char_stats = null
+music = null
+
+[node name="TutorialUI" type="CanvasLayer" parent="." unique_id=1507890790]
+layer = 11
+
+[node name="Control" type="Control" parent="TutorialUI" unique_id=1345189086]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="TutorialUI/Control" unique_id=1864697060]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 41.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ag5k5")
+
+[node name="InstructionLabel" type="Label" parent="TutorialUI/Control" unique_id=137545914]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 252.0
+offset_bottom = 35.0
+text = "Teste testado"
+autowrap_mode = 3
+
+[node name="NextStep" type="Button" parent="TutorialUI/Control" unique_id=437053054]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 43.0
+offset_right = 48.0
+offset_bottom = 67.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_y2wn6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_006x4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_igse4")
+text = "Entendi"
+
+[connection signal="pressed" from="TutorialUI/Control/NextStep" to="." method="_on_next_step_pressed"]

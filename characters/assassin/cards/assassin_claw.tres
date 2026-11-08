@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://cfs1cmodpt2n1"]
+
+[ext_resource type="Texture2D" uid="uid://d2jjf0jg56gpi" path="res://art/Basic Asset Pack/Basic Animal Animations/Stinky Skunk/assassin_claw.png" id="1_rsqgh"]
+[ext_resource type="Script" uid="uid://deskcx3rx6eue" path="res://characters/assassin/cards/assassin_claw.gd" id="2_rsqgh"]
+
+[resource]
+script = ExtResource("2_rsqgh")
+id = "assassin_claw"
+target = 1
+cost = 1
+icon = ExtResource("1_rsqgh")
+tooltip_text = "[center]Cause [color=\"ff0000\"]%s[/color] de dano.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

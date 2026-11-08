@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://c4c3nbql4ljsk"]
+
+[ext_resource type="Texture2D" uid="uid://10crr47mtchs" path="res://art/Basic Asset Pack/Basic Animal Animations/Stinky Skunk/assassin_tail.png" id="1_ajrtv"]
+[ext_resource type="Script" uid="uid://chpqwm3866q17" path="res://characters/assassin/cards/assassin_tail.gd" id="2_puux0"]
+
+[resource]
+script = ExtResource("2_puux0")
+id = "assassin_tail"
+rarity = 2
+target = 1
+cost = 2
+icon = ExtResource("1_ajrtv")
+tooltip_text = "[center]Cause [color=\"ff0000\"]%s[/color] de dano mas receba [color=\"ff0000\"]%s[/color] de dano[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

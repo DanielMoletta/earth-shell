@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://cssg0rgxr4o00"]
+
+[ext_resource type="Texture2D" uid="uid://doyk1nhx80s25" path="res://art/Basic Asset Pack/Basic Animal Animations/Stinky Skunk/assassin_weaken_claw.png" id="1_cuosp"]
+[ext_resource type="Script" uid="uid://bfh7swo28wud" path="res://characters/assassin/cards/assassin_weaken_claw.gd" id="2_vbyhi"]
+
+[resource]
+script = ExtResource("2_vbyhi")
+id = "assassin_weaken_claw"
+rarity = 2
+target = 1
+cost = 2
+icon = ExtResource("1_cuosp")
+tooltip_text = "[center]Cause [color=\"ff0000\"]%s[/color] de dano e aplique 4 [color=\"ffdf00\"]Exposto[/color].[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://ldvli4ttc73j"]
+
+[ext_resource type="Texture2D" uid="uid://ce6aapnbe4f2j" path="res://art/Basic Asset Pack/Basic Animal Animations/Stinky Skunk/assassin_fang.png" id="1_03mew"]
+[ext_resource type="Script" uid="uid://b61us6ycjh0fa" path="res://characters/assassin/cards/assassin_fang.gd" id="2_xfqxi"]
+
+[resource]
+script = ExtResource("2_xfqxi")
+id = "assassin_fang"
+rarity = 1
+target = 1
+cost = 2
+icon = ExtResource("1_03mew")
+tooltip_text = "[center]Cause [color=\"ff0000\"]%s[/color] de dano e queime por [color=\"ff7700\"]%s[/color]turnos.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

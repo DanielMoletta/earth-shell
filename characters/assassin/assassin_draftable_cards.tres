@@ -1,8 +1,16 @@
 [gd_resource type="Resource" script_class="CardPile" format=3 uid="uid://cq3w0yhfq1qx7"]
 
 [ext_resource type="Script" uid="uid://bg8nmus47b34h" path="res://custom_resources/card.gd" id="1_w5gqk"]
+[ext_resource type="Resource" uid="uid://ldvli4ttc73j" path="res://characters/assassin/cards/assassin_fang.tres" id="2_gm3hg"]
 [ext_resource type="Script" uid="uid://cx7pv6t0wf8e" path="res://custom_resources/card_pile.gd" id="2_uvfdm"]
+[ext_resource type="Resource" uid="uid://88441g2onav5" path="res://characters/assassin/cards/assassin_quick_block.tres" id="3_56bax"]
+[ext_resource type="Resource" uid="uid://ctrej43wulklc" path="res://characters/assassin/cards/assassin_steal.tres" id="4_x0jo8"]
+[ext_resource type="Resource" uid="uid://j5o2o45yrudj" path="res://characters/assassin/cards/assassin_swipe.tres" id="5_34vun"]
+[ext_resource type="Resource" uid="uid://c4c3nbql4ljsk" path="res://characters/assassin/cards/assassin_tail.tres" id="6_ec04s"]
+[ext_resource type="Resource" uid="uid://d3a4s1wmjnh7n" path="res://characters/assassin/cards/assassin_throw.tres" id="7_63ty8"]
+[ext_resource type="Resource" uid="uid://cssg0rgxr4o00" path="res://characters/assassin/cards/assassin_weaken_claw.tres" id="8_50qyc"]
 
 [resource]
 script = ExtResource("2_uvfdm")
+cards = Array[ExtResource("1_w5gqk")]([ExtResource("2_gm3hg"), ExtResource("3_56bax"), ExtResource("3_56bax"), ExtResource("4_x0jo8"), ExtResource("4_x0jo8"), ExtResource("5_34vun"), ExtResource("5_34vun"), ExtResource("6_ec04s"), ExtResource("6_ec04s"), ExtResource("7_63ty8"), ExtResource("7_63ty8"), ExtResource("8_50qyc"), ExtResource("8_50qyc")])
 metadata/_custom_type_script = "uid://cx7pv6t0wf8e"

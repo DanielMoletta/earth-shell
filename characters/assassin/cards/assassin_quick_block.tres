@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://88441g2onav5"]
+
+[ext_resource type="Texture2D" uid="uid://bxbgeo42l7u72" path="res://art/Basic Asset Pack/Basic Animal Animations/Stinky Skunk/assassin_mini_block.png" id="1_fjtcx"]
+[ext_resource type="Script" uid="uid://dmy8km7bt6ivw" path="res://characters/assassin/cards/assassin_quick_block.gd" id="2_fjtcx"]
+
+[resource]
+script = ExtResource("2_fjtcx")
+id = "assassin_quick_block"
+type = 1
+rarity = 1
+cost = 1
+icon = ExtResource("1_fjtcx")
+tooltip_text = "[center]Ganhe [color=\"0044ff\"]%s[/color] de block e receba 2 cartas.[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

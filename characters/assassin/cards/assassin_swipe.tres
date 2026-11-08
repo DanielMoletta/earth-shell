@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://j5o2o45yrudj"]
+
+[ext_resource type="Texture2D" uid="uid://cxke8d2mmvwbd" path="res://art/Basic Asset Pack/Basic Animal Animations/Stinky Skunk/assassin_sweep.png" id="1_05jvf"]
+[ext_resource type="Script" uid="uid://b6qlsjjtugwgp" path="res://characters/assassin/cards/assassin_swipe.gd" id="2_xgp7m"]
+
+[resource]
+script = ExtResource("2_xgp7m")
+id = "assassin_swipe"
+rarity = 2
+target = 2
+cost = 2
+icon = ExtResource("1_05jvf")
+tooltip_text = "[center]Cause [color=\"ff0000\"]%s[/color] de dano e ganhe [color=\"0044ff\"]%s[/color] de block por alvo[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"

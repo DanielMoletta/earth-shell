@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://ctrej43wulklc"]
+
+[ext_resource type="Texture2D" uid="uid://cu4hgys0nqstj" path="res://art/Basic Asset Pack/Basic Animal Animations/Stinky Skunk/assassin_steal.png" id="1_vvro8"]
+[ext_resource type="Script" uid="uid://bpwwuuymq2r74" path="res://characters/assassin/cards/assassin_steal.gd" id="2_vvro8"]
+
+[resource]
+script = ExtResource("2_vvro8")
+id = "assassin_steal"
+rarity = 1
+target = 1
+cost = 1
+icon = ExtResource("1_vvro8")
+tooltip_text = "[center]Cause [color=\"ff0000\"]%s[/color] de dano e roube [color=\"0044ff\"]%s[/color] de block[/center]"
+metadata/_custom_type_script = "uid://bg8nmus47b34h"
