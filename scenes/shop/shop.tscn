@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://c2k6lpae18q8v"]
 
 [ext_resource type="Script" uid="uid://blq2sa8cp64ly" path="res://scenes/shop/shop.gd" id="1_oqoy8"]
-[ext_resource type="Texture2D" uid="uid://bj3im6egs4wxx" path="res://art/tile_0086.png" id="2_41omk"]
 [ext_resource type="Resource" uid="uid://cy5rtyb7a4hpp" path="res://relics/coupons.tres" id="2_ccxow"]
 [ext_resource type="Script" uid="uid://dmjnumrgrk62b" path="res://custom_resources/relic.gd" id="2_k5co3"]
 [ext_resource type="Resource" uid="uid://b11jhsqqh7kfe" path="res://relics/explosive_barrel.tres" id="3_7lk2o"]
-[ext_resource type="Texture2D" uid="uid://cvtonr5sinxbx" path="res://art/shopkeeper_blink.png" id="3_uthr0"]
 [ext_resource type="PackedScene" uid="uid://d24w6bygugbhd" path="res://scenes/shop/shop_card.tscn" id="4_2u2et"]
 [ext_resource type="Resource" uid="uid://dn6frpxqh1o7" path="res://relics/mana_potion.tres" id="4_4u268"]
 [ext_resource type="Resource" uid="uid://c8c1y85x2h5l" path="res://relics/reinforced_armor.tres" id="5_8ym3b"]
@@ -14,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://bkmq76jcysxaf" path="res://relics/blinding_potion.tres" id="6_t35ch"]
 [ext_resource type="Resource" uid="uid://b7xh51rkdccfy" path="res://relics/confusing_staff.tres" id="7_wrryf"]
 [ext_resource type="Resource" uid="uid://r6aixmaucd4b" path="res://relics/wooden_sword.tres" id="8_rq1it"]
+[ext_resource type="Texture2D" uid="uid://b8bq77uq4fif2" path="res://art/tile_0124.png" id="10_xoc10"]
 [ext_resource type="PackedScene" uid="uid://ctvxie3ni1ik4" path="res://scenes/modifier_handler/modifier_handler.tscn" id="11_863hj"]
 [ext_resource type="PackedScene" uid="uid://bqefj5q31b84i" path="res://scenes/modifier_handler/modifier.tscn" id="12_xf6l8"]
 
@@ -27,44 +26,6 @@ fill_from = Vector2(0.5, 0)
 fill_to = Vector2(0.5, 1)
 metadata/_snap_enabled = true
 metadata/_snap_count = 8
-
-[sub_resource type="Animation" id="Animation_wctye"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Shopkeeper:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_41omk")]
-}
-
-[sub_resource type="Animation" id="Animation_1lyhw"]
-resource_name = "blink"
-length = 0.15
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Shopkeeper:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.15),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("3_uthr0"), ExtResource("2_41omk")]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_c4845"]
-_data = {
-&"RESET": SubResource("Animation_wctye"),
-&"blink": SubResource("Animation_1lyhw")
-}
 
 [sub_resource type="LabelSettings" id="LabelSettings_cywyj"]
 font_size = 12
@@ -102,17 +63,9 @@ offset_top = -90.0
 offset_right = 90.0
 offset_bottom = -10.0
 grow_vertical = 0
-texture = ExtResource("2_41omk")
+texture = ExtResource("10_xoc10")
 expand_mode = 1
 stretch_mode = 5
-
-[node name="ShopkeeperAnimation" type="AnimationPlayer" parent="DecorationLayer" unique_id=1885773141]
-unique_name_in_owner = true
-libraries/ = SubResource("AnimationLibrary_c4845")
-
-[node name="BlinkTimer" type="Timer" parent="DecorationLayer" unique_id=2071087646]
-unique_name_in_owner = true
-one_shot = true
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=139532002]
 layer = 2
